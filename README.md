@@ -3,13 +3,8 @@
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
 # \<Unlucky Player’s Terminal Adventures\>
  > Your author list below should include links to all members GitHub (remove existing author).
- > Tristan Zhao https://github.com/Tzec557
- > Nathan Tewinpagti, https://github.com/ntewi001
- > Hikaru Shimada https://github.com/hika583
- > Kevin Carrillo https://github.com/kevcarrillo03
-
  
- > Authors: \<[Nathan Tewinpagti](https://github.com/ntewi001), [Tristan Zhao](https://github.com/Tzec557), [Hikaru Shimada](https://github.com/hika583),[Kevin Carrillo](https://github.com/kevcarrillo03)\>
+ > Authors: \<[Nathan Tewinpagti](https://github.com/ntewi001), [Tristan Zhao](https://github.com/Tzec557), [Hikaru Shimada](https://github.com/hika583), [Kevin Carrillo](https://github.com/kevcarrillo03)\>
  
 
  > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
