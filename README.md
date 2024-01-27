@@ -5,14 +5,8 @@
  Authors: \<[Nathan Tewinpagti](https://github.com/ntewi001), [Tristan Zhao](https://github.com/Tzec557), [Hikaru Shimada](https://github.com/hika583), [Kevin Carrillo](https://github.com/kevcarrillo03)\>
 
 ## Project Description
- > Your project description should summarize the project you are proposing. Be sure to include:
- > * Why is it important or interesting to you?
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- > * What will be the input/output of your project?
- > * What are the features that the project provides?
- > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
- > 
- > You also need to set up an empty project board using GitHub projects (board view with default columns). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added. All columns should be in the right order.
+
+As a group, we all grew up playing video games. We believed it would be fun to recreate the nostalgia of popular games we played such as Oregon trail, Pokemon and other RPG games through coding. This project also seems important for our future projects/endeavors, serving as an introduction into game design. Involving elements such as narration creation, and object oriented design. For the coding language we will be using C++. We will also be using Github to distribute our game. We might include a file saving system through the use of Json file structure. The main means of communication between the user and the system will be through the terminal screen. Users will be able to input their choice of action through text in the terminal using cin >>. All the outputs will be visible to the users through the terminal screen in a form of text feedback. In our project, we will create a text-based RPG game featuring characters equipped with different roles and customizable actions and attributes. These roles include characters such as Warriors, Mages and more. Players can personalize their characters by changing their attributes and traits through stats points, earned via the leveling combat system. Within our system, users can choose actions displayed on the terminal, like fighting, running away, or changing equipment. Character progression involves a combat system where battles with other non-playable characters allows to gain experience points to level up.We will introduce bosses and a narrative for the user characters for an immersive experience.
  > ## Phase II
  > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
