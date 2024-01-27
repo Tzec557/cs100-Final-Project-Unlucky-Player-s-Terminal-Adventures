@@ -1,8 +1,13 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# \<Project title\>
+# \<Unlucky Player’s Terminal Adventures\>
  > Your author list below should include links to all members GitHub (remove existing author).
+ > Tristan Zhao https://github.com/Tzec557
+ > Nathan Tewinpagti, https://github.com/ntewi001
+ > Hikaru Shimada https://github.com/hika583
+ > Kevin Carrillo https://github.com/kevcarrillo03
+
  
  > Authors: \<[Jeffrey McDaniel](https://github.com/jmcda001)\>
 
