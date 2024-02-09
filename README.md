@@ -1,4 +1,8 @@
- > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
+ > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date.
+>
+> https://www.canva.com/design/DAF8Q3Qi9Jw/s-WdDz4x2ohDc1rplySo6g/edit?utm_content=DAF8Q3Qi9Jw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+>
+> 
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
 # \<Unlucky Player’s Terminal Adventures\>
