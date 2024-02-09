@@ -10,7 +10,6 @@
 
 ## Project Description
 
-
  * As a group, we believed this project would be interesting because we all grew up playing video games. We believed it would be fun to recreate the nostalgia of popular games we played such as Oregon trail, Pokemon and other RPG games through coding. This project also seems important for our future projects/endeavors, serving as an introduction into game design. 
  * For the coding language we will be using C++. We will also be using Github to distribute our game. We might include a file saving system through the use of Json file structure. The main means of communication between the user and the system will be through the terminal screen. 
  * For input/output, users will be able to input their choice of action through text in the terminal. All the outputs will be visible to the users through the terminal screen in a form of text feedback. 
