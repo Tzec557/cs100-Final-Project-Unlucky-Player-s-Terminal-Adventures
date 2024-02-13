@@ -13,7 +13,7 @@
     * These roles include characters such as Warriors, Mages and more. 
     * Players can personalize their characters by changing their attributes and traits through stats points, earned via the leveling combat system. Within our system, users can choose actions displayed on the terminal, like fighting, running away, or changing equipment. 
     * Character progression involves a combat system where battles with other non-playable characters allows to gain experience points to level up. We will introduce bosses and a narrative for the user characters for an immersive experience.
- > ## Phase II
+
 
 ## User Interface Specification
 * [User Interface Specification](https://lucid.app/lucidchart/3a26727c-9df4-4e01-a2cc-66bdd428f6e6/edit?viewport_loc=-404%2C-1447%2C2216%2C3168%2C0_0&invitationId=inv_866891d5-7aba-4d15-a045-91cf5d1855c0)
