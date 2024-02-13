@@ -14,6 +14,8 @@
     * Players can personalize their characters by changing their attributes and traits through stats points, earned via the leveling combat system. Within our system, users can choose actions displayed on the terminal, like fighting, running away, or changing equipment. 
     * Character progression involves a combat system where battles with other non-playable characters allows to gain experience points to level up. We will introduce bosses and a narrative for the user characters for an immersive experience.
  > ## Phase II
+[User Interface Specification](https://lucid.app/lucidchart/3a26727c-9df4-4e01-a2cc-66bdd428f6e6/edit?viewport_loc=-404%2C-1447%2C2216%2C3168%2C0_0&invitationId=inv_866891d5-7aba-4d15-a045-91cf5d1855c0)
+[Class Diagram](https://www.canva.com/design/DAF8Q2YofAE/3AaZgaXJxIf-3V4Yf_nnZA/edit?utm_content=DAF8Q2YofAE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
  > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
  > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
