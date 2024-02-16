@@ -18,7 +18,7 @@
 ## User Interface Specification
 * [User Interface Specification](https://lucid.app/lucidchart/3a26727c-9df4-4e01-a2cc-66bdd428f6e6/edit?viewport_loc=-404%2C-1447%2C2216%2C3168%2C0_0&invitationId=inv_866891d5-7aba-4d15-a045-91cf5d1855c0)
 ### Navigation Diagram
-
+![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/Navigation%20Diagram.jpeg)
 
 ### Screen Layouts
 
