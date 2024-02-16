@@ -17,12 +17,79 @@
 
 ## User Interface Specification
 * [User Interface Specification](https://lucid.app/lucidchart/3a26727c-9df4-4e01-a2cc-66bdd428f6e6/edit?viewport_loc=-404%2C-1447%2C2216%2C3168%2C0_0&invitationId=inv_866891d5-7aba-4d15-a045-91cf5d1855c0)
+
 ### Navigation Diagram
 ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/Navigation%20Diagram.jpeg)
+
+## Home
+- Starting point of the narrative.
+
+## Play
+- The player decides whether to enter the game.
+  - **Yes:** Proceeds to the introduction of the game, continuing the virtual adventure.
+  - **No:** Ends the game, acknowledging the player's decision to avoid entering the virtual world.
+
+## Intro
+- **Transported to the Hospital:** The protagonist is taken to the hospital, setting the stage for a medical situation.
+- **Told by the Doctor that You Have Terminal Cancer:** The doctor delivers the grim news of a terminal illness, introducing a critical turning point.
+
+## Option
+- Choose to Enter a Game to Heal the Cancer, or Wait Till Die (Ends the Game).
+- The player is presented with a choice to either enter a game for healing or wait for the terminal condition to take its course.
+
+## Character Creation (Choose the Character Info)
+- If the player chooses to enter the game, they proceed to create their in-game character, providing personalization to the narrative.
+
+## Spawns in the Bed <- Save Point
+- The character spawns in a bed, indicating a save point within the virtual world.
+
+## Play Against the Boss (If Win, Then Get Heal a Little)
+- The player engages in a boss battle. Winning the battle results in partial healing (add points), introducing a game mechanic.
+
+## If Dead, Goes Back to Bed
+- If the player loses the boss battle, they return to the bed save point, allowing for retries.
+
+## The Boss Drops Points and the Weapon
+- Upon defeating the boss, the player receives points and a weapon, indicating progress and rewards.
+
+## If More Than 100 Points -> Ends the Game “You Have Healed the Cancer”
+- If the accumulated points surpass a threshold (100), the game concludes with a positive outcome, symbolized by the healing of the terminal cancer.
+
+This diagram represents a dynamic and interactive narrative where player decisions and actions directly influence the storyline and outcomes. It incorporates elements of choice, consequence, and game mechanics to engage the player in a unique and evolving experience.
+
+
+
 
 
 ### Screen Layouts
 ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/Screen%20Layout.jpeg)
+
+## Start Screen
+- **Options:** New Game, Exit
+- **Purpose:** Allows the player to start a new game, or exit the application.
+
+## Character Creation
+- **Components:**
+  - Choose Name
+  - Select Class
+  - Confirm Choices
+- **Purpose:** Enables the player to create their character with a chosen name, and class.
+
+## Main Game Screen
+- **Components:** Player Stats (Name, Class, Health, Attack, Defense)
+- **Purpose:** Displays essential player information and provides access to different game features.
+
+## Player Stats
+- **Components:** Health, Attack, Defense
+- **Purpose:** Shows the player's current stats.
+
+## Boss Battle Screen
+- **Components:**
+  - Boss HP
+  - Player Options (Attack, Defend, Flee)
+- **Purpose:** Represents the interface during a boss battle, where the player can choose actions.
+
+
 
 
 ## Class Diagram
