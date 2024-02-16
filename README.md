@@ -64,26 +64,26 @@ This diagram represents a dynamic and interactive narrative where player decisio
 ### Screen Layouts
 ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/Screen%20Layout.jpeg)
 
-## Start Screen
+#### Start Screen
 - **Options:** New Game, Exit
 - **Purpose:** Allows the player to start a new game, or exit the application.
 
-## Character Creation
+#### Character Creation
 - **Components:**
   - Choose Name
   - Select Class
   - Confirm Choices
 - **Purpose:** Enables the player to create their character with a chosen name, and class.
 
-## Main Game Screen
+#### Main Game Screen
 - **Components:** Player Stats (Name, Class, Health, Attack, Defense)
 - **Purpose:** Displays essential player information and provides access to different game features.
 
-## Player Stats
+#### Player Stats
 - **Components:** Health, Attack, Defense
 - **Purpose:** Shows the player's current stats.
 
-## Boss Battle Screen
+#### Boss Battle Screen
 - **Components:**
   - Boss HP
   - Player Options (Attack, Defend, Flee)
