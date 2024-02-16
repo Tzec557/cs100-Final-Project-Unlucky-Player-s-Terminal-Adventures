@@ -20,7 +20,9 @@
 ### Navigation Diagram
 ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/Navigation%20Diagram.jpeg)
 
+
 ### Screen Layouts
+![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/Screen%20Layout.jpeg)
 
 
 ## Class Diagram
