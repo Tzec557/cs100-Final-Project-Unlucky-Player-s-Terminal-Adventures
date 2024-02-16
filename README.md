@@ -21,38 +21,38 @@
 ### Navigation Diagram
 ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/Navigation%20Diagram.jpeg)
 
-## Home
+#### Home
 - Starting point of the narrative.
 
-## Play
+#### Play
 - The player decides whether to enter the game.
   - **Yes:** Proceeds to the introduction of the game, continuing the virtual adventure.
   - **No:** Ends the game, acknowledging the player's decision to avoid entering the virtual world.
 
-## Intro
+#### Intro
 - **Transported to the Hospital:** The protagonist is taken to the hospital, setting the stage for a medical situation.
 - **Told by the Doctor that You Have Terminal Cancer:** The doctor delivers the grim news of a terminal illness, introducing a critical turning point.
 
-## Option
+#### Option
 - Choose to Enter a Game to Heal the Cancer, or Wait Till Die (Ends the Game).
 - The player is presented with a choice to either enter a game for healing or wait for the terminal condition to take its course.
 
-## Character Creation (Choose the Character Info)
+#### Character Creation (Choose the Character Info)
 - If the player chooses to enter the game, they proceed to create their in-game character, providing personalization to the narrative.
 
-## Spawns in the Bed <- Save Point
+#### Spawns in the Bed <- Save Point
 - The character spawns in a bed, indicating a save point within the virtual world.
 
-## Play Against the Boss (If Win, Then Get Heal a Little)
+#### Play Against the Boss (If Win, Then Get Heal a Little)
 - The player engages in a boss battle. Winning the battle results in partial healing (add points), introducing a game mechanic.
 
-## If Dead, Goes Back to Bed
+#### If Dead, Goes Back to Bed
 - If the player loses the boss battle, they return to the bed save point, allowing for retries.
 
-## The Boss Drops Points and the Weapon
+#### The Boss Drops Points and the Weapon
 - Upon defeating the boss, the player receives points and a weapon, indicating progress and rewards.
 
-## If More Than 100 Points -> Ends the Game “You Have Healed the Cancer”
+#### If More Than 100 Points -> Ends the Game “You Have Healed the Cancer”
 - If the accumulated points surpass a threshold (100), the game concludes with a positive outcome, symbolized by the healing of the terminal cancer.
 
 This diagram represents a dynamic and interactive narrative where player decisions and actions directly influence the storyline and outcomes. It incorporates elements of choice, consequence, and game mechanics to engage the player in a unique and evolving experience.
