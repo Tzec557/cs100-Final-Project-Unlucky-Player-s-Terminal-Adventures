@@ -4,18 +4,18 @@ using namespace std;
 
 class Character{
     public:
-        Character();
+        Character(string name);
         ~Character();
 
         void getName();
-        void setName();
+        void setName(string name);
         void getHealth();
-        void setHealth();
+        void addHealth(int health);
 
 
     private:
-       int health;
-       string name;
+       int _health;
+       string _name;
 
 };
  #endif

@@ -1,21 +1,26 @@
-#ifndef CHARACTER_HPP
-#define CHARACTER_HPP
+#include <iostream>
+#include <stdexcept>
 using namespace std;
 
-class Character{
-    public:
-        Character();
-        ~Character();
+#include "../hearder/Character.h"
 
-        void getName();
-        void setName();
-        void getHealth();
-        void setHealth();
+Character::Character(string name){
+    _health = 20;
+    _name = name;
+}
 
+Character::~Character(){
+}
 
-    private:
-       int health;
-       string name;
-
-};
- #endif
+void Character::getName(){
+    return _name;
+}
+void Character::setName(string name){
+    _name = name
+}
+void Character::getHealth(){
+    return _health;
+}
+void Character::addHealth(int num){
+    _health = _health + num;
+}
