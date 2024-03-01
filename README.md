@@ -93,6 +93,7 @@ This diagram represents a dynamic and interactive narrative where player decisio
 
 
 ## Class Diagram
+![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/1.jpg)
 * [Class Diagram](https://www.canva.com/design/DAF8Q2YofAE/3AaZgaXJxIf-3V4Yf_nnZA/edit?utm_content=DAF8Q2YofAE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
  
  > ## Phase III
