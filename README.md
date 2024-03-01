@@ -94,6 +94,12 @@ This diagram represents a dynamic and interactive narrative where player decisio
 
 ## Class Diagram
 ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/1.jpg)
+
+>In our updated class diagram we applied the single responsibility principle. We applied it by changing out player class so that it splits into 3 classes of player, enemy, and character which both player and enemy derive from. This helped our code as it made it look less cluttered. 
+
+>In our second update to our class diagram, we applied the single responsibility principle again. In our original player class, it contained functions that should have been done in a separate class.  So we created a point class and weapon class that deals with those aspects of our game and it’s not just all in the player class.
+
+
 * [Class Diagram](https://www.canva.com/design/DAF8Q2YofAE/3AaZgaXJxIf-3V4Yf_nnZA/edit?utm_content=DAF8Q2YofAE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
  
  > ## Phase III
