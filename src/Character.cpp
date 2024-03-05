@@ -5,6 +5,7 @@ using namespace std;
 
 Character::Character(){
     _health = 20;
+    _name = "";
 }
 Character::Character(string name){
     _health = 20;
