@@ -1,9 +1,12 @@
 #include <iostream>
+#include "../header/Character.hpp"
 #include <stdexcept>
 using namespace std;
 
-#include "../hearder/Character.h"
-
+Character::Character(){
+    _health = 20;
+    _name = "";
+}
 Character::Character(string name){
     _health = 20;
     _name = name;
@@ -12,13 +15,13 @@ Character::Character(string name){
 Character::~Character(){
 }
 
-void Character::getName(){
+string Character::getName(){
     return _name;
 }
 void Character::setName(string name){
-    _name = name
+    _name = name;
 }
-void Character::getHealth(){
+int Character::getHealth(){
     return _health;
 }
 void Character::addHealth(int num){
