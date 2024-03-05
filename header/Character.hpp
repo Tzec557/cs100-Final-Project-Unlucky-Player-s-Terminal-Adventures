@@ -1,15 +1,17 @@
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
 using namespace std;
+#include <string> 
 
 class Character{
     public:
+        Character();
         Character(string name);
         ~Character();
 
-        void getName();
+        string getName();
         void setName(string name);
-        void getHealth();
+        int getHealth();
         void addHealth(int health);
 
 
