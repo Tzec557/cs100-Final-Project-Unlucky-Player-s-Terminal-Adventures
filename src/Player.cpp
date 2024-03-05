@@ -1,7 +1,7 @@
 #include "../header/Player.hpp"
 #include <string> 
 
-Player::Player(const string& playername) : Character(playername) {
+Player::Player() : Character("playername") {
 }
 
 void Player::damageDone(int num) {

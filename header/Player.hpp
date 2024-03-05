@@ -4,9 +4,9 @@
 using namespace std;
 
 class Player: public Character{
- public:
- 	Player(const string& playername);
- 	void damageDone(int num);
- };
+	public:
+ 		Player();
+ 		void damageDone(int num);
+};
 
 #endif
