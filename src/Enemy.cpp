@@ -1,9 +1,9 @@
-#include"../header/Enemy.hpp"
-#include<iostream>
-using namespace std;
+#include "../header/Enemy.hpp"
+#include <iostream>
 
-Enemy::Enemy() : Character(Boss){}
+Enemy::Enemy() : Character("Boss") {
+}
 
-void Enemy::damageTaken(int num){
-   _health = _health + num;
+void Enemy::damageTaken(int num) {
+   addHealth(num); 
 }
