@@ -8,3 +8,5 @@ test/googletest
 test/googletest/*
 lib/
 src/libsimpleLibrary.a
+a.out
+my_program
