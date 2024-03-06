@@ -1,7 +1,7 @@
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
 
-#include "./header/Character.hpp"
+#include "../header/Character.hpp"
 
 using namespace std;
 

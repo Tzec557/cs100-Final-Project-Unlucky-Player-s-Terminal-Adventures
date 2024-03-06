@@ -1,11 +1,15 @@
 #ifndef PLAYER_HPP
 #define PLAYER_HPP
-#include"Character.hpp"
+#include "../header/Character.hpp"
+
+#include <string>
+
 using namespace std;
 
 class Player: public Character{
 	public:
  		Player();
+		Player(string name);
  		void damageDone(int num);
 };
 
