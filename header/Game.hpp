@@ -1,6 +1,8 @@
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
-#include "Character.hpp"
+
+#include "./header/Character.hpp"
+
 using namespace std;
 
 class Game{

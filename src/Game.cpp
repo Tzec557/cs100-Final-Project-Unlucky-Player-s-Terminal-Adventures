@@ -69,7 +69,7 @@ void Game::NameSelection(){
     }
 }
 
-void PlayGame(){
+void Game::PlayGame(){
     // intro and stats
     cout << "You spawn in the world. You wake up.\n"
          << "Stats: \n"
@@ -83,4 +83,3 @@ void PlayGame(){
          << "As you are about to walk out of your room, you encounter your first enemy...\n"
          << "Your first enemy is a housefly. Defeat it to gain points to cure your illness\n";    
 }
-    

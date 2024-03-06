@@ -1,23 +1,18 @@
-#ifndef CHARACTER_HPP
-#define CHARACTER_HPP
-using namespace std;
-#include <string> 
+#pragma once 
+#include <string>
 
-class Character{
-    public:
-        Character();
-        Character(string name);
-        ~Character();
+class Character {
+public:
+    Character();
+    Character(std::string name);
+    virtual ~Character(); // Make destructor virtual for base class
 
-        string getName();
-        void setName(string name);
-        int getHealth();
-        void addHealth(int health);
+    std::string getName() const; // Mark getters as const
+    void setName(std::string name);
+    int getHealth() const;
+    void addHealth(int health);
 
-
-    private:
-       int _health;
-       string _name;
-
+protected:
+    int _health;
+    std::string _name;
 };
- #endif

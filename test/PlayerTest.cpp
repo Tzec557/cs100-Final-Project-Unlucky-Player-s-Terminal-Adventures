@@ -1,7 +1,7 @@
 #include "../header/Player.hpp"
 #include <gtest/gtest.h>
 
-Test(PlayerTests, testinitializer){
+TEST(PlayerTests, testinitializer){
     Player *p = new Player();
     ASSERT_NE(p,nullptr);
 }
@@ -17,8 +17,11 @@ TEST(PlayerTests, DamageDoneTest) {
     EXPECT_EQ(player.getHealth(), 20);
 }
 
+
+/*
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
+*/
 

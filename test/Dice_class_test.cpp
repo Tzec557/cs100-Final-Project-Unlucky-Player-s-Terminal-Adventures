@@ -1,6 +1,4 @@
-#include "gtest/gtest.h"
-#include "gmock/gmock.h" 
-
+#include <gtest/gtest.h>
 #include "../header/dice.hpp"
 
 TEST(DiceTests, testNullInitializer) {
