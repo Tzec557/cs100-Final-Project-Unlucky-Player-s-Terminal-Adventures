@@ -2,8 +2,8 @@
 #include<iostream>
 using namespace std;
 
-Player::Player() : Character(Player){}
+Player::Player() : Character("Player"){}
 
 void Player::damageDone(int num){
-   _health = _health + num;
+   _health += num;
 }

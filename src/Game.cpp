@@ -47,7 +47,7 @@ void Game::NameSelection(){
     cout << "What is your name?\n";
     string userName;
     cin >> userName;
-    Character playerOne = new Character(userName);
+    Character *playerOne = new Character(userName);
 
     //confirm
     cout << "Are you sure you would like to continue with the name " << userName << "?\n";

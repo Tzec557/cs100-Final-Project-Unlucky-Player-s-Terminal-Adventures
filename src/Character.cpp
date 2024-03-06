@@ -1,29 +1,24 @@
-#include <iostream>
 #include "../header/Character.hpp"
-#include <stdexcept>
-using namespace std;
 
-Character::Character(){
-    _health = 20;
-    _name = "";
-}
-Character::Character(string name){
-    _health = 20;
-    _name = name;
-}
+Character::Character() : _health(20), _name("") {}
 
-Character::~Character(){
-}
+Character::Character(std::string name) : _health(20), _name(name) {}
 
-string Character::getName(){
+Character::~Character() {}
+
+std::string Character::getName() const {
     return _name;
 }
-void Character::setName(string name){
+
+void Character::setName(std::string name) {
     _name = name;
 }
-int Character::getHealth(){
+
+int Character::getHealth() const {
     return _health;
 }
-void Character::addHealth(int num){
-    _health = _health + num;
+
+void Character::addHealth(int health) {
+    _health += health;
 }
+
