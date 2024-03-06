@@ -6,6 +6,7 @@ class Game{
     public:
         void StartGame();
         void Intro();
+        void NameSelection();
         void PlayGame();
 
 };
