@@ -69,7 +69,7 @@ void Game::NameSelection(){
     }
 }
 
-void PlayGame(){
+void Game::PlayGame(){
     // intro and stats
     cout << "You spawn in the world. You wake up.\n"
          << "Stats: \n"

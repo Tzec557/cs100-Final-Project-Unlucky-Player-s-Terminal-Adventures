@@ -1,7 +1,7 @@
-#include "Character.hpp"
+#include "../header/Character.hpp"
 #include <gtest/gtest.h>
 
-Test(CharacterTests, testinitializer){
+TEST(CharacterTests, testinitializer){
     Character *c = new Character();
     ASSERT_NE(c,nullptr);
 }
@@ -34,8 +34,10 @@ TEST(CharacterTests, AddNegativeHealthTest) {
     EXPECT_EQ(character.getHealth(), -20);
 }
 
+
+/*
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
-
+*/

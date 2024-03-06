@@ -1,7 +1,7 @@
 #include "../header/Enemy.hpp"
 #include <gtest/gtest.h>
 
-Test(EnemyTests, testinitializer){
+TEST(EnemyTests, testinitializer){
     Enemy *e = new Enemy();
     ASSERT_NE(e,nullptr);
 }
@@ -17,7 +17,9 @@ TEST(EnemyTests, DamageTakenTest) {
     EXPECT_EQ(enemy.getHealth(), 20);
 }
 
+/*
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
+*/
