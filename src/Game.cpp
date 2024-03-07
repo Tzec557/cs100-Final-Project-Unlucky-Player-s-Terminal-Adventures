@@ -85,13 +85,13 @@ void Game::PlayGame(){
     cout << "You look out your bedroom window and realize you have been transported to a different world.\n"
          << "You get out of bed...\n"
          << "As you are about to walk out of your room, you encounter your first enemy...\n"
-         << "Your first enemy is a housefly. Defeat it to gain points to cure your illness\n";  
+         << "Your first enemy is a housefly. Defeat it to gain points to cure your illness\n";
+    
+    enemy=new Enemy("housefly");  
     battle();//delete later       
 }
 
 void Game::battle(){
-    
-    enemy=new Enemy();//look into changing this later but intialize enemy
     
     char choice;//ask if player wants to flee or fight 
     
@@ -102,7 +102,7 @@ void Game::battle(){
     cin>>choice;
     if (choice=='q'){
         //player_points->addPoint(-1*player_points->getPoint());
-        cout<<"you chose the easy way out\n";
+        cout<<"you chose the easy way out smh\n";
         exit(1);
     }
     else{
@@ -111,7 +111,7 @@ void Game::battle(){
     while(enemy->getHealth()>0){//allows for player to keep fighting until he defeats the boss
         Dice *action=new Dice();//an intance of the dice object to see players action
         
-    
+        char pickNumber;
         if (action->rollDice()%2==0){//if number modulo 2 is zero then attack
             if (action->rollDice()%2==0){
                 player_weapon->weaponAttack();
@@ -125,7 +125,7 @@ void Game::battle(){
         }
 
         else{//if first condition not met then the enemy attacks
-            cout<<"Boss is now going to atttack\n";
+            cout<<"Boss is now going to attack\n";
             if (action->rollDice()%2==0){ //if modulo 2 then you dodge
                 cout<<"Nice! you doged his attack\n";
             }
@@ -145,7 +145,10 @@ void Game::battle(){
             delete action;
         }
     }
-    cout<<"congrats you have defeated the Boss!!!!!\n";
+    cout<<"congrats you have defeated the Boss!!!!!\n"
+    <<'\n'
+    <<"Because of your victory you will be rewarded 4 points!!!!!";
+    player_points->addPoint(4);
     
 }
 
