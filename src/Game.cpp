@@ -105,6 +105,7 @@ void Game::battle(){
 
     
     cin>>choice;
+    
     if (choice=='q'){
         //player_points->addPoint(-1*player_points->getPoint());
         cout<<"you chose the easy way out smh\n";
@@ -130,11 +131,6 @@ void Game::battle(){
 
         cout<<enemy->getName()<<" rolled "<<enemyRoll<<'\n';
 
-        while (playerRoll==enemyRoll){//there no option for equal choice so we make enemy reroll
-            enemyRoll=action->rollDice();
-            playerRoll=action->rollDice();
-        }
-
         
 
         if (playerRoll > enemyRoll){//if user choice is greater then he has a chance to attack
@@ -153,7 +149,7 @@ void Game::battle(){
             }
         }
 
-        else{//if first condition not met then the enemy attacks
+        else if(enemyRoll>playerRoll){//if first condition not met then the enemy attacks
             cout<<"you chose wrong sadly now try and dodge!"<<endl;
             cout<<enemy->getName()<<" is now going to attack\n";
             if (action->rollDice()%2==0){ //if modulo 2 then you dodge
@@ -164,6 +160,9 @@ void Game::battle(){
                 playerOne->damageDone(-2);
                 cout<<"Oh no you got hit "<<"you now have "<<playerOne->getHealth()<<" health left\n\n";
             }
+        }
+        else{
+            cout<<" woah you guys got same number nothing happens!!!"<<endl;
         }
 
         if (playerOne->getHealth()<=0){
@@ -179,7 +178,7 @@ void Game::battle(){
     <<'\n'
     <<"Because of your victory you will be rewarded 4 points!!!!!";
     player_points->addPoint(4);
-    cout<<"you now have "<<player_points->getPoint();
+    cout<<"you now have "<<player_points->getPoint()<<" points"<<endl;
     
 }
 
