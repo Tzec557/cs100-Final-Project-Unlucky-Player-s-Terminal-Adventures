@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Weapon::Weapon(): weapon_damage(2), weapon_type("stick"){}
+Weapon::Weapon(): weapon_damage(5), weapon_type("stick"){}
 
 void Weapon::weaponAttack(){
     Enemy target;
