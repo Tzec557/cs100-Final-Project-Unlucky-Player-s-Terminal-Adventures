@@ -1,5 +1,6 @@
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
+#include "../header/Enemy.hpp"
 using namespace std;
 class Weapon {
     private:
@@ -11,7 +12,7 @@ class Weapon {
 
         void change_weapon();
 
-        void weaponAttack();
+        void weaponAttack(Enemy*);
         int getWeaponDamage();
 };
 

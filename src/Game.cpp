@@ -119,10 +119,12 @@ void Game::battle(){
         Dice *action=new Dice();//an intance of the dice object to see players action
         
         cout<<"press x to roll the dice to see if you have to fight or defend"<<endl;
-        
+        char button;
+        cin>>button;
         int playerRoll=action->rollDice();
-        cout<<"you rolled "<<playerRoll<<endl<<endl;
-
+        if (button=='x'){
+            cout<<"you rolled "<<playerRoll<<endl<<endl;
+        }
         cout<<enemy->getName()<< "will roll now"<<endl;
         int enemyRoll=action->rollDice();
 
@@ -140,9 +142,10 @@ void Game::battle(){
             cout<<"you now get to attack!!!!!!"<<endl;
 
             if (action->rollDice()%2==0){//second condition just to see if enemy blocked or not
-                player_weapon->weaponAttack();
+                player_weapon->weaponAttack(enemy);
                 cout<<"your attack hit "<<enemy->getName()<<endl<<endl
-                    <<"your opponent is now down "<<player_weapon->getWeaponDamage()<<" hp from attack\n\n";
+                    <<"your opponent is now down "<<player_weapon->getWeaponDamage()<<" hp from attack\n\n"
+                    <<"he now has "<<enemy->getHealth()<<" health"<<endl;
             }
 
             else{
