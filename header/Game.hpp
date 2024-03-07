@@ -24,6 +24,7 @@ class Game{
         void NameSelection();
         void PlayGame();
         void battle();
+        void bed_checkpoint();
     
     private:
         Player *playerOne=nullptr;
