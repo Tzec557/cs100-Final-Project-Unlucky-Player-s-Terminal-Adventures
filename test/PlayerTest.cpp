@@ -7,14 +7,14 @@ TEST(PlayerTests, testinitializer){
 }
 
 TEST(PlayerTests, DamageDoneTest) {
-    Player player; // Assuming the default health is initialized to 0 in the base class
-    EXPECT_EQ(player.getHealth(), 0);
+    Player player; // Assuming the default health is initialized to 20 in the base class
+    EXPECT_EQ(player.getHealth(), 20);
 
     player.damageDone(30);
-    EXPECT_EQ(player.getHealth(), 30);
+    EXPECT_EQ(player.getHealth(), 50);
 
     player.damageDone(-10); // Assuming negative damage is allowed
-    EXPECT_EQ(player.getHealth(), 20);
+    EXPECT_EQ(player.getHealth(), 40);
 }
 
 
