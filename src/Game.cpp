@@ -85,7 +85,8 @@ void Game::PlayGame(){
     cout << "You look out your bedroom window and realize you have been transported to a different world.\n"
          << "You get out of bed...\n"
          << "As you are about to walk out of your room, you encounter your first enemy...\n"
-         << "Your first enemy is a housefly. Defeat it to gain points to cure your illness\n";    
+         << "Your first enemy is a housefly. Defeat it to gain points to cure your illness\n";  
+    battle();//delete later       
 }
 
 void Game::battle(){
@@ -98,8 +99,8 @@ void Game::battle(){
         <<" you can flee by pressing 'q' but you will die!\n"
         <<"if you want to fight press any other character\n";
     
-    //cin>>choice;
-    /*if (choice=='q'){
+    cin>>choice;
+    if (choice=='q'){
         //player_points->addPoint(-1*player_points->getPoint());
         cout<<"you chose the easy way out\n";
         exit(1);
@@ -107,7 +108,7 @@ void Game::battle(){
     else{
         cout<<"your battle begins now!\n";
     }/**/
-    while(enemy->getHealth()<=0){//allows for player to keep fighting until he defeats the boss
+    while(enemy->getHealth()>0){//allows for player to keep fighting until he defeats the boss
         Dice *action=new Dice();//an intance of the dice object to see players action
         
     
