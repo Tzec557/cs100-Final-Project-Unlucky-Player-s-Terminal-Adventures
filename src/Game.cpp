@@ -1,6 +1,10 @@
 #include <iostream>
 #include "../header/Game.hpp"
 #include "../header/Character.hpp"
+#include "../header/Player.hpp"
+#include "../header/Enemy.hpp"
+#include "../header/dice.hpp"
+
 
 using namespace std;
 
@@ -47,7 +51,7 @@ void Game::NameSelection(){
     cout << "What is your name?\n";
     string userName;
     cin >> userName;
-    Character *playerOne = new Character(userName);
+    playerOne = new Player(userName);
 
     //confirm
     cout << "Are you sure you would like to continue with the name " << userName << "?\n";
@@ -83,3 +87,65 @@ void Game::PlayGame(){
          << "As you are about to walk out of your room, you encounter your first enemy...\n"
          << "Your first enemy is a housefly. Defeat it to gain points to cure your illness\n";    
 }
+
+void Game::battle(){
+    
+    enemy=new Enemy();//look into changing this later but intialize enemy
+    
+    char choice;//ask if player wants to flee or fight 
+    
+    cout<<"you are now fighting "<<enemy->getName()
+        <<" you can flee by pressing 'q' but you will die!\n"
+        <<"if you want to fight press any other character\n";
+    
+    //cin>>choice;
+    /*if (choice=='q'){
+        //player_points->addPoint(-1*player_points->getPoint());
+        cout<<"you chose the easy way out\n";
+        exit(1);
+    }
+    else{
+        cout<<"your battle begins now!\n";
+    }/**/
+    while(enemy->getHealth()<=0){//allows for player to keep fighting until he defeats the boss
+        Dice *action=new Dice();//an intance of the dice object to see players action
+        
+    
+        if (action->rollDice()%2==0){//if number modulo 2 is zero then attack
+            if (action->rollDice()%2==0){
+                player_weapon->weaponAttack();
+                cout<<"you hit the boss\n"
+                    <<"Boss took "<<player_weapon->getWeaponDamage()<<" points in damage\n";
+            }
+
+            else{
+                cout<<"Boss blocked your attack\n";
+            }
+        }
+
+        else{//if first condition not met then the enemy attacks
+            cout<<"Boss is now going to atttack\n";
+            if (action->rollDice()%2==0){ //if modulo 2 then you dodge
+                cout<<"Nice! you doged his attack\n";
+            }
+
+            else{//you get hit by the boss
+                playerOne->damageDone(-15);
+                cout<<"Oh no you got hit "<<"you now have "<<playerOne->getHealth()<<" health left\n";
+            }
+        }
+
+        if (playerOne->getHealth()<=0){
+            cout<<"OH YOU DEAD LOL\n";
+            delete action;
+            exit(1);//later add a way to go back to bed checkpoint
+        }
+        if (enemy->getHealth()<=0){
+            delete action;
+        }
+    }
+    cout<<"congrats you have defeated the Boss!!!!!\n";
+    
+}
+
+//\n

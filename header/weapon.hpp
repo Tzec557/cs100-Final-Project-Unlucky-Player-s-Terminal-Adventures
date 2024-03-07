@@ -12,6 +12,7 @@ class Weapon {
         void change_weapon();
 
         void weaponAttack();
+        int getWeaponDamage();
 };
 
 #endif // _HPP
