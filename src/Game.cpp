@@ -84,3 +84,4 @@ void PlayGame(){
          << "Your first enemy is a housefly. Defeat it to gain points to cure your illness\n";    
 }
     
+    
