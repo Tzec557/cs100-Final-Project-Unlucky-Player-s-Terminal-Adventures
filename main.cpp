@@ -6,13 +6,13 @@ int main() {
     Character player("John Doe");
     Character player1 = Character("Alice");
     string userName = "A";
-    Character playerOne =  Character(userName);
+    Character *playerOne =  new Character(userName);
 
     // Displaying the initial state
     std::cout << "Initial Health: " << player.getHealth() << std::endl;
     std::cout << "Initial Name: " << player.getName() << std::endl;
 
-     std::cout << "Initial Name: " << playerOne.getName() << std::endl;
+     std::cout << "Initial Name: " << playerOne->getName() << std::endl;
 
     std::cout << "Initial Health: " << player1.getHealth() << std::endl;
     std::cout << "Initial Name: " << player1.getName() << std::endl;
