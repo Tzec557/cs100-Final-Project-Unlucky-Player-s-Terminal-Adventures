@@ -4,7 +4,8 @@
 Enemy::Enemy() : Character("Boss") {
    _damage = 0;
 }
-
+Enemy::Enemy(string name) : Character(name) {
+}
 void Enemy::damageTaken(int num) {
    addHealth(num); 
 }

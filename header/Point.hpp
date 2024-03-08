@@ -1,5 +1,4 @@
-#ifndef CHARACTER_HPP
-#define CHARACTER_HPP
+#pragma once
 using namespace std;
 
 class Point{
@@ -15,5 +14,4 @@ class Point{
         int pointNum;
 
 };
- #endif
 

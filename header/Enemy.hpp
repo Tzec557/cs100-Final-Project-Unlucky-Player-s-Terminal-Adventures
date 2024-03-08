@@ -10,6 +10,7 @@ class Enemy: public Character{
 	_damage;
  public:
  	Enemy();
+	Enemy(string name);
  	void damageTaken(int num);
 	void attack(Player *playerone);
  };
