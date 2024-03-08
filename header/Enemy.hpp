@@ -1,6 +1,10 @@
 #include <string>
 #include"../header/Character.hpp"
 #include "../header/Player.hpp"
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 using namespace std;
 
 #ifndef ENEMY_HPP
@@ -11,6 +15,7 @@ class Enemy: public Character{
 	int _damage;
  public:
  	Enemy();
+	Enemy(string name);
  	void damageTaken(int num);
 	void attack(Player *playerone);
  };
