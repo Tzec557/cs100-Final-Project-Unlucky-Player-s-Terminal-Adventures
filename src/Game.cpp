@@ -130,13 +130,13 @@ void Game::battle(){
         //cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
 
-        int playerRoll=action->rollDice();
+        int playerRoll=action->rollDice();//player roll
         if (button=='x'){
             cout<<"you rolled "<<playerRoll<<endl<<endl;
         }
-        cout<<enemy->getName()<< "will roll now"<<endl;
+        
+        cout<<enemy->getName()<< "will roll now"<<endl;//enemy roll
         int enemyRoll=action->rollDice();
-
         cout<<enemy->getName()<<" rolled "<<enemyRoll<<'\n';
 
         
@@ -144,14 +144,12 @@ void Game::battle(){
         if (playerRoll > enemyRoll){//if user choice is greater then he has a chance to attack
             
             cout<<"you now get to attack!!!!!!"<<endl;
-
             if (action->rollDice()%2==0){//second condition just to see if enemy blocked or not
                 player_weapon->weaponAttack(enemy);
                 cout<<"your attack hit "<<enemy->getName()<<endl<<endl
                     <<"your opponent is now down "<<player_weapon->getWeaponDamage()<<" hp from attack\n\n"
                     <<"he now has "<<enemy->getHealth()<<" health"<<endl;
             }
-
             else{
                 cout<<"Oops your attack was blocked\n\n";
             }
@@ -169,7 +167,8 @@ void Game::battle(){
                 cout<<"Oh no you got hit "<<"you now have "<<playerOne->getHealth()<<" health left\n\n";
             }
         }
-        else{
+        
+        else{//both players roll same number
             cout<<" woah you guys got same number nothing happens!!!"<<endl;
         }
 
@@ -182,11 +181,14 @@ void Game::battle(){
             delete action;
         }
     }
-    cout<<"congrats you have defeated the Boss!!!!!\n"
-    <<'\n'
+    //player defeated the boss
+    cout<<"congrats you have defeated the Boss!!!!!\n"<<'\n'
     <<"Because of your victory you will be rewarded 4 points!!!!!";
-    player_points->addPoint(4);
-    cout<<"you now have "<<player_points->getPoint()<<" points"<<endl;
+    
+    player_points->addPoint(4);//reward is 4 pts
+    
+
+    bed_checkpoint();
     
 }
 
@@ -194,13 +196,14 @@ void Game::battle(){
 void Game::bed_checkpoint(){
     cout<<"You have spawned into your bed"<<endl;
      
+
+    cout<<"if you want to check your current stats press s"<<endl
+        <<"else press any other character"<<endl;
+    
     char buttonOption;
     cin>>buttonOption; 
     cin.clear();//flush buffer
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    
-    cout<<"if you want to check your current stats press s"<<endl
-        <<"else press any other character"<<endl;
 
     if (buttonOption=='s'){
         cout<<"these are your current stats"<<endl;
