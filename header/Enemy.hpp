@@ -6,9 +6,12 @@ using namespace std;
 #define ENEMY_HPP
 
 class Enemy: public Character{
+ private:
+	_damage;
  public:
  	Enemy();
  	void damageTaken(int num);
+	void attack(Player *playerone);
  };
 
 #endif
