@@ -93,6 +93,7 @@ void Game::PlayGame(){
         <<"if the number you choose is less than the one the enemy rolled he gets to attacks and vice versa\n\n";
     enemy=new Enemy("housefly");
     bed_checkpoint();
+    delete enemy;
     //battle();//delete later       
 }
 
@@ -159,7 +160,7 @@ void Game::battle(){
             cout<<"you chose wrong sadly now try and dodge!"<<endl;
             cout<<enemy->getName()<<" is now going to attack\n";
             if (action->rollDice()%2==0){ //if modulo 2 then you dodge
-                cout<<"Nice! you doged his attack\n\n";
+                cout<<"Nice! you dodged his attack\n\n";
             }
 
             else{//you get hit by the boss
