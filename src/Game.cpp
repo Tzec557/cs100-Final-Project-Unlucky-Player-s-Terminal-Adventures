@@ -175,7 +175,8 @@ void Game::battle(){
         if (playerOne->getHealth()<=0){
             cout<<"OH YOU DEAD LOL\n";
             delete action;
-            exit(1);//later add a way to go back to bed checkpoint
+            bed_checkpoint();
+            //later add a way to go back to bed checkpoint
         }
         if (enemy->getHealth()<=0){
             delete action;
@@ -186,9 +187,14 @@ void Game::battle(){
     <<"Because of your victory you will be rewarded 4 points!!!!!";
     
     player_points->addPoint(4);//reward is 4 pts
+
+    if (player_points->getPoint()>100){
+        cout<<"congrats you have officialy won the game"<<endl;
+        exit(1);
+    }
     
 
-    bed_checkpoint();
+    
     
 }
 
@@ -202,6 +208,7 @@ void Game::bed_checkpoint(){
     
     char buttonOption;
     cin>>buttonOption; 
+    
     cin.clear();//flush buffer
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
