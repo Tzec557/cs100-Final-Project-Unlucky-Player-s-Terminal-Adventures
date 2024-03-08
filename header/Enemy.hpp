@@ -1,5 +1,6 @@
 #include <string>
 #include"../header/Character.hpp"
+#include "../header/Player.hpp"
 using namespace std;
 
 #ifndef ENEMY_HPP
@@ -7,7 +8,7 @@ using namespace std;
 
 class Enemy: public Character{
  private:
-	_damage;
+	int _damage;
  public:
  	Enemy();
  	void damageTaken(int num);

@@ -6,6 +6,6 @@ using namespace std;
 int main(){
 	
     Game game;
-    game.StartGame();	
+    game.StartGame();
     return 0;
 }

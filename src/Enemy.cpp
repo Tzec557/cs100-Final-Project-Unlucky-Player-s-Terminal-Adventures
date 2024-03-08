@@ -1,4 +1,5 @@
 #include "../header/Enemy.hpp"
+#include "../header/Player.hpp"
 #include <iostream>
 
 Enemy::Enemy() : Character("Boss") {
