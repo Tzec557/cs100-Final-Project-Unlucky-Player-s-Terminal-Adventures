@@ -1,14 +1,16 @@
-#include <string>
-#include"../header/Character.hpp"
-using namespace std;
-
 #ifndef PLAYER_HPP
 #define PLAYER_HPP
+#include "../header/Character.hpp"
+
+#include <string>
+
+using namespace std;
 
 class Player: public Character{
- public:
- 	Player();
- 	void damageDone(int num);
- };
+	public:
+ 		Player();
+		Player(string name);
+ 		void damageDone(int num);
+};
 
 #endif

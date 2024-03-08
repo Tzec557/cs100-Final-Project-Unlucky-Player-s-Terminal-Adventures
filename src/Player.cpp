@@ -1,9 +1,12 @@
-#include"../header/Player.hpp"
-#include<iostream>
-using namespace std;
+#include "../header/Player.hpp"
+#include <string> 
 
-Player::Player() : Character(Player){}
+Player::Player() : Character("playername") {
+}
 
-void Player::damageDone(int num){
-   _health = _health + num;
+Player::Player(string name) : Character(name) {
+}
+
+void Player::damageDone(int num) {
+   addHealth(num);
 }

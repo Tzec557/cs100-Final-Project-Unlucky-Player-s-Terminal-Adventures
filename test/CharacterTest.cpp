@@ -1,7 +1,7 @@
-#include "Character.hpp"
+#include "../header/Character.hpp"
 #include <gtest/gtest.h>
 
-Test(CharacterTests, testinitializer){
+TEST(CharacterTests, testinitializer){
     Character *c = new Character();
     ASSERT_NE(c,nullptr);
 }
@@ -17,25 +17,32 @@ TEST(CharacterTests, SetNameTest) {
     EXPECT_EQ(character.getName(), "NewName");
 }
 
+
+// failing
 TEST(CharacterTests, GetHealthTest) {
-    Character character("HealthTest");
-    EXPECT_EQ(character.getHealth(), 0); // Assuming initial health is 0
+    Character *c = new Character("HealthTest");
+    EXPECT_EQ(c->getHealth(), 20); // Assuming initial health is 20
 }
 
+
+//failing
 TEST(CharacterTests, AddHealthTest) {
-    Character character("HealthAddTest");
-    character.addHealth(50);
-    EXPECT_EQ(character.getHealth(), 50);
+    Character *c = new Character("HealthAddTest");
+    c->addHealth(70);
+    EXPECT_EQ(c->getHealth(), 90);
 }
 
+//failing
 TEST(CharacterTests, AddNegativeHealthTest) {
-    Character character("NegativeHealthTest");
-    character.addHealth(-20); // Assuming adding negative health is allowed
-    EXPECT_EQ(character.getHealth(), -20);
+    Character *c = new Character("HealthAddNegativeTest");
+    c->addHealth(-20); // Assuming adding negative health is allowed
+    EXPECT_EQ(c->getHealth(), 0);
 }
 
+
+/*
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
-
+*/

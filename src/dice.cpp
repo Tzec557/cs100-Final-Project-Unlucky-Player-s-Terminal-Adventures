@@ -13,6 +13,6 @@ int
 Dice::rollDice(){
 
 	int dice_result = rand() % 6 + 1;
-	this->result = dice_result
+	this->result = dice_result;
 	return dice_result;
 }
