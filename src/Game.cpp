@@ -181,6 +181,8 @@ void Game::battle(){
         if (enemy->getHealth()<=0){
             delete action;
         }
+
+        delete action;
     }
     //player defeated the boss
     cout<<"congrats you have defeated the Boss!!!!!\n"<<'\n'

@@ -6,5 +6,6 @@ using namespace std;
 int main(){
     Game *gameTime=new Game();
     gameTime->StartGame();
+    delete gameTime;
     return 0;
 }
