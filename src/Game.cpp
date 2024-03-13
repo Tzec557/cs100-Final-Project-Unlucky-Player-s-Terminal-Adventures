@@ -119,7 +119,11 @@ void Game::battle(){
     else{
         cout<<"your battle begins now!\n\n";
        
-    }/**/
+    }
+
+
+    //reinitialize the game and the boss hp here so that when user tries to play another game, it will work
+
 
     while(enemy->getHealth()>0){//allows for player to keep fighting until he defeats the boss
         Dice *action=new Dice();//an intance of the dice object to see players action
@@ -178,11 +182,10 @@ void Game::battle(){
             delete action;
             exit(1);//later add a way to go back to bed checkpoint
         }
-        if (enemy->getHealth()<=0){
-            delete action;
-        }
+        
+	delete action;
 
-        delete action;
+	
     }
     //player defeated the boss
     cout<<"congrats you have defeated the Boss!!!!!\n"<<'\n'
