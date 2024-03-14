@@ -17,6 +17,7 @@ class Enemy: public Character{
     virtual ~Enemy();
 
     void damageTaken(int num);
+	void setDamage(int damage); 
     void attack(Player* playerone);
     int getDamage() const { return _damage; }
     string getRandomEnemyName(vector<string>& names);
