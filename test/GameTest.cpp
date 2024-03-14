@@ -144,7 +144,6 @@ TEST(GameTest, NameSelectionInvalidInputTest) {
 
 
 
-
 TEST(GameTest, PlayGameTest) {
     // Prepare input stream to simulate both name selection and the initial action in PlayGame
     std::stringstream mockInput;
@@ -170,8 +169,6 @@ TEST(GameTest, PlayGameTest) {
     std::string output = mockOutput.str();
     EXPECT_TRUE(output.find("You have reached 100 points and won the game!!!") != std::string::npos); // Verify the specific output
 }
-
-
 
 
 

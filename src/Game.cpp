@@ -29,12 +29,16 @@ void Game::StartGame(){
 	    isGameRunning = false;
             return;  
         } else {
-
-            Intro();
-
-            NameSelection();
-
-            PlayGame();
+	
+            	
+       	   Intro();
+	   
+	   if (isGameRunning){
+               NameSelection();
+	   }
+	   if (isGameRunning){
+               PlayGame();
+	   }
         }
     }
 
@@ -119,12 +123,11 @@ void Game::PlayGame(){
     cout<<"In battle you will choose a number 1-6 and the Enemy will roll a dice\n"
         <<"if the number you choose is less than the one the enemy rolled he gets to attacks and vice versa\n\n\n";
    
-    while (player_points->getPoint() < 100) {
-	while (isGameRunning) {
-        	bed_checkpoint();
-		battle();
-		if (!isGameRunning) break;
-    	}
+    while (player_points->getPoint() < 100 && isGameRunning) {
+       	bed_checkpoint();
+	battle();
+	if (!isGameRunning) break;
+
     }
     cout << "You have reached 100 points and won the game!!!\n"
          << "After enduring countless chemotherapy sessions, braving the trials of the Bosses, you finally stand victorious at the Cancer Treatment Center.\n"
