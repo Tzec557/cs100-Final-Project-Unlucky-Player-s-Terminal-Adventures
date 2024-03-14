@@ -22,6 +22,14 @@ void Weapon::change_weapon(Point* point){
         this->weapon_type="steel bat";
         this->weapon_damage=-26;
     }
+    if (point->getPoint()==60){
+        this->weapon_type="sword";
+        this->weapon_damage=-36;
+    }
+    if (point->getPoint()==80){
+        this->weapon_type="light saber";
+        this->weapon_damage=-45;
+    }
     
     
 }
