@@ -107,12 +107,16 @@ TEST(GameTest, IntroInvalidTest) {
 }
 
 
-/*
+
 
 
 TEST(GameTest, PrintUserStatsTest) {
     std::stringstream mockInput("John\n1\n"); // Simulate name selection
     std::stringstream mockOutput;
+
+    std::streambuf* originalCin = std::cin.rdbuf();
+    std::streambuf* originalCout = std::cout.rdbuf();
+
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
@@ -127,6 +131,9 @@ TEST(GameTest, PrintUserStatsTest) {
     EXPECT_TRUE(output.find("current health: 20") != std::string::npos);
     EXPECT_TRUE(output.find("current points: 0") != std::string::npos);
 
+    std::cin.rdbuf(originalCin);
+    std::cout.rdbuf(originalCout);
+
 }
 
 
@@ -135,6 +142,10 @@ TEST(GameTest, PrintUserStatsTest) {
 TEST(GameTest, NameSelectionTest) {
     std::stringstream mockInput("John\n1\n"); // Simulates user entering a name and confirming it
     std::stringstream mockOutput;
+    
+    std::streambuf* originalCin = std::cin.rdbuf();
+    std::streambuf* originalCout = std::cout.rdbuf();
+    
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
@@ -144,8 +155,12 @@ TEST(GameTest, NameSelectionTest) {
 
     std::string output = mockOutput.str();
     EXPECT_TRUE(output.find("Welcome John.") != std::string::npos);
-}
 
+
+    std::cin.rdbuf(originalCin);
+    std::cout.rdbuf(originalCout);
+}
+/*
 TEST(GameTest, NameSelectionQuitTest) {
     std::stringstream mockInput("John\n2\n"); // Simulates user entering a name and confirming it
     std::stringstream mockOutput;
