@@ -87,7 +87,7 @@ void Game::NameSelection(){
 
         if (userInput == "2") {
             cout << "You have chosen to quit. Goodbye.\n\n";
-            exit(0);
+            return;
         } else {
             cout << "You have chosen to confirm. Welcome " << userName << ".\n\n";
         }
