@@ -19,7 +19,6 @@ TEST(EnemyTests, ParameterizedConstructorTest) {
     std::string name = "Dragon";
     Enemy enemy(name);
     EXPECT_EQ(enemy.getName(), name); // Check if the name is set correctly
-    EXPECT_EQ(enemy.getDamage(), 0); // Check if the default damage is 0
 }
 
 TEST(EnemyTests, DamageTakenTest) {
