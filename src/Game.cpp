@@ -188,16 +188,16 @@ void Game::battle(){
             delete action;
             exit(1);//later add a way to go back to bed checkpoint
         }
-        
 	delete action;
 
 	
     }
     //player defeated the boss
     cout<<"congrats you have defeated the Boss!!!!!\n"<<'\n'
-    <<"Because of your victory you will be rewarded 4 points!!!!!";
-    
-    player_points->addPoint(4);//reward is 4 pts
+    <<"Because of your victory you will be rewarded random points from 1 to 50 !!!!!" << endl;
+    int addPlayerPoint = rand() % 50 + 1;
+    cout << "Congrat you got "<< addPlayerPoint << " points !!!!!" << endl;
+    player_points->addPoint(4);//reward is random points from 1 to 50
     
 
     bed_checkpoint();
