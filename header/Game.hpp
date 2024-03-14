@@ -23,6 +23,7 @@ class Game{
         void Intro();
         void NameSelection();
         void PlayGame();
+	void printUserStats();
         void battle();
         void bed_checkpoint();
     

@@ -22,14 +22,14 @@ void Game::StartGame(){
 
         if(userInput == "2"){
             return;  
+        } else {
+            Intro();
+
+            NameSelection();
+
+            PlayGame();
         }
     }
-
-    Intro();
-
-    NameSelection();
-
-    PlayGame();
 
     return;
 }
@@ -77,10 +77,10 @@ void Game::NameSelection(){
         if (userInput == "2") {
             cout << "You have chosen to quit. Goodbye.\n";
             exit(0);
+        } else {
+            cout << "You have chosen to confirm. Welcome " << userName << ".\n";
         }
     } 
-
-    cout << "You have chosen to confirm. Welcome " << userName << ".\n";
     return;
 
 }
@@ -129,14 +129,15 @@ void Game::bed_checkpoint(){
         if (buttonOption=='s'){
 
             printUserStats();
-        } else {
+        } else if (buttonOption == 'q'){
 
             cout << "You have chosen to quit. Goodbye.\n";
             exit(0);
+        } else {
+
+            cout<<"You've chosen to battle"<<endl;
         }
     }
-
-    cout<<"You've chosen to battle"<<endl;
 
     return;
 } 
