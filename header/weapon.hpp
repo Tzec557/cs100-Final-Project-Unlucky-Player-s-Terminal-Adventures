@@ -10,7 +10,7 @@ class Weapon {
         Weapon();
         string getWeapon();
 
-        void change_weapon();
+        void change_weapon(Point*);
 
         void weaponAttack(Enemy*);
         int getWeaponDamage();

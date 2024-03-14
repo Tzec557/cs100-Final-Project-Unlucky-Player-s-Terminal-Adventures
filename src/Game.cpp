@@ -149,6 +149,7 @@ void Game::bed_checkpoint(){
         } else {
 
             cout<<"You've chosen to battle"<<endl;
+            battle();
         }
     }
 
@@ -261,9 +262,9 @@ void Game::battle(){
 
     //player defeated the boss
     cout<<"\n\n\nCongrats you have defeated the Boss!!!!!\n"<<'\n'
-    <<"Because of your victory you will be rewarded 4 points!!!!!\n\n\n";
+    <<"Because of your victory you will be rewarded 20 points!!!!!\n\n\n";
     
-    player_points->addPoint(4);//reward is 4 pts
+    player_points->addPoint(20);//reward is 20 pts
     
     delete enemy;
 }       
