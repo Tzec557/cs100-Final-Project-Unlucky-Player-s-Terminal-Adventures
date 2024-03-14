@@ -163,7 +163,7 @@ void Game::printUserStats(){
         <<"\tcurrent weapon: "<<player_weapon->getWeapon()<<endl
         <<"\tweapons damage: "<<player_weapon->getWeaponDamage()<<endl<<endl;
     
-    cout<<"\tcurrent health:"<<playerOne->getHealth()<<endl<<endl;
+    cout<<"\tcurrent health: "<<playerOne->getHealth()<<endl<<endl;
 
     cout<<"\tcurrent points: "<<player_points->getPoint()<<endl;
 
@@ -251,7 +251,7 @@ void Game::battle(){
         if (playerOne->getHealth()<=0){
             cout<<"OH YOU DEAD LOL\n";
             delete action;
-            exit(1);//later add a way to go back to bed checkpoint
+            exit(0);//later add a way to go back to bed checkpoint
         }
         
 	delete action;
