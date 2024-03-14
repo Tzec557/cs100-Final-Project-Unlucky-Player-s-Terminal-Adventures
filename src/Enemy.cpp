@@ -20,6 +20,9 @@ void Enemy::damageTaken(int num) {
    addHealth(num); 
 }
 
+void Enemy::setDamage(int damage) {
+    _damage = damage;
+}
 void Enemy::attack(Player *playerone) {
    playerone->addHealth(_damage); 
 }
