@@ -125,14 +125,16 @@ void Game::PlayGame(){
    
     while (player_points->getPoint() < 100 && isGameRunning) {
        	bed_checkpoint();
+	if (!isGameRunning) break;
 	battle();
 	if (!isGameRunning) break;
-
     }
-    cout << "You have reached 100 points and won the game!!!\n"
-         << "After enduring countless chemotherapy sessions, braving the trials of the Bosses, you finally stand victorious at the Cancer Treatment Center.\n"
-         << "Though the road was tough and the challenges many, you emerged stronger, wiser, and filled with hope for the future. The sun shines brighter, the colors seem more vivid, and you know that you are unstoppable.\n";
 
+    if (player_points->getPoint() > 100){
+    	cout << "You have reached 100 points and won the game!!!\n"
+             << "After enduring countless chemotherapy sessions, braving the trials of the Bosses, you finally stand victorious at the Cancer Treatment Center.\n"
+             << "Though the road was tough and the challenges many, you emerged stronger, wiser, and filled with hope for the future. The sun shines brighter, the colors seem more vivid, and you know that you are unstoppable.\n";
+    }
 }
 
 void Game::setPlayerPoints(int points) {
