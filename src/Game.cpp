@@ -57,7 +57,7 @@ void Game::Intro(){
 
         if (userInput == "2") {
             cout << "You die.\n";
-            exit(0);
+            return;
         }
     } 
 }
@@ -88,7 +88,7 @@ void Game::NameSelection(){
 
         if (userInput == "2") {
             cout << "You have chosen to quit. Goodbye.\n\n";
-	    exit(0);
+            return;
         } else {
             cout << "You have chosen to confirm. Welcome " << userName << ".\n\n";
         }
@@ -149,7 +149,7 @@ void Game::bed_checkpoint(){
         } else if (buttonOption == 'q'){
 
             cout << "You have chosen to quit. Goodbye.\n";
-            exit(0);
+            return;
         } else {
 
             cout<<"You've chosen to battle"<<endl;
@@ -205,7 +205,7 @@ void Game::battle(){
         if (choice == 'q'){
 
             cout<<"you chose the easy way out smh\n";
-            exit(0);
+            return;
         } else {
 
             cout<<"your battle begins now!\n\n";
