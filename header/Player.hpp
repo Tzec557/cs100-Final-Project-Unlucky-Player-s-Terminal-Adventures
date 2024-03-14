@@ -10,6 +10,7 @@ class Player: public Character{
 	public:
  		Player();
 		Player(string name);
+		virtual ~Player();
  		void damageDone(int num);
 };
 
