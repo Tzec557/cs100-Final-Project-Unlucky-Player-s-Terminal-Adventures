@@ -17,32 +17,26 @@ TEST(CharacterTests, SetNameTest) {
     EXPECT_EQ(character.getName(), "NewName");
 }
 
-
-// failing
 TEST(CharacterTests, GetHealthTest) {
     Character *c = new Character("HealthTest");
     EXPECT_EQ(c->getHealth(), 20); // Assuming initial health is 20
 }
 
-
-//failing
 TEST(CharacterTests, AddHealthTest) {
     Character *c = new Character("HealthAddTest");
     c->addHealth(70);
     EXPECT_EQ(c->getHealth(), 90);
 }
 
-//failing
 TEST(CharacterTests, AddNegativeHealthTest) {
     Character *c = new Character("HealthAddNegativeTest");
     c->addHealth(-20); // Assuming adding negative health is allowed
     EXPECT_EQ(c->getHealth(), 0);
 }
 
-
-/*
-int main(int argc, char** argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+TEST(CharacterTests, SetHealthTest) {
+    Character character;
+    int health = 100;
+    character.setHealth(health); // Set the health using the setHealth function
+    EXPECT_EQ(character.getHealth(), health); // Check if the health is set correctly
 }
-*/
