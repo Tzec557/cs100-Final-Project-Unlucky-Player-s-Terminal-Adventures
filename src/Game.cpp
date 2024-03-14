@@ -128,7 +128,7 @@ void Game::bed_checkpoint(){
 
         if (buttonOption=='s'){
 
-            printUserStats()
+            printUserStats();
         } else {
 
             cout << "You have chosen to quit. Goodbye.\n";
