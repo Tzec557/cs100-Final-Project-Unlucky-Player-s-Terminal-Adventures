@@ -180,8 +180,8 @@ void Game::battle(){
 
     char choice;//ask if player wants to flee or fight 
     vector<string> enemyNames = {"Viper", "Shadow", "Doom", "Nightmare", "Darklord"};
-    //Enemy *enemy = new Enemy();
-    std::unique_ptr<Enemy> enemy(new Enemy());
+	
+    Enemy *enemy = new Enemy();
     enemy->setName(enemy->getRandomEnemyName(enemyNames));
     enemy->setHealth(enemy->randomInRange(20, 50));
     // enemy = new Enemy(enemy.getRandomEnemyName(enemyNames));
@@ -214,8 +214,8 @@ void Game::battle(){
 
 
     while(enemy->getHealth()>0){//allows for player to keep fighting until he defeats the boss
-        //Dice *action=new Dice();//an intance of the dice object to see players action
-        std::unique_ptr<Dice> action(new Dice());
+	    
+        Dice *action=new Dice();//an intance of the dice object to see players action
         cout<<"\n\n\npress x to roll the dice to see if you have to fight or defend"<<endl;
         char button;
         cin>>button;
