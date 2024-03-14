@@ -71,7 +71,6 @@ This diagram represents a dynamic and interactive narrative where player decisio
 #### Character Creation
 - **Components:**
   - Choose Name
-  - Select Class
   - Confirm Choices
 - **Purpose:** Enables the player to create their character with a chosen name, and class.
 
