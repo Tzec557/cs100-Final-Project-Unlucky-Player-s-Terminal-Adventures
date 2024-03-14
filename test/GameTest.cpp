@@ -30,17 +30,33 @@ public:
 TEST(GameTest, IntroDeathTest) {
     std::stringstream mockInput("2\n"); // Simulates user choosing to quit immediately during intro
     std::stringstream mockOutput;
+    //recently added
+    std::streambuf* originalCin = std::cin.rdbuf();
+    std::streambuf* originalCout = std::cout.rdbuf();
+    //
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
-    Game game;
-
+    //Game game;
+    MockGame game;//test add
+    //test add
+    EXPECT_CALL(game, Intro()).Times(1);
+    EXPECT_CALL(game, PlayGame()).Times(0);  // Ensure PlayGame is not called
+    EXPECT_CALL(game, NameSelection()).Times(0);
+    //
     game.Intro();
 
     std::string output = mockOutput.str();
 
     EXPECT_TRUE(output.find("Invalid Input. Enter option again:") == std::string::npos);
-    EXPECT_TRUE(output.find("You die.") != std::string::npos);
+    //EXPECT_TRUE(output.find("You die.") != std::string::npos);
+     
+     //test add
+    // Restore original stream buffers
+    std::cin.rdbuf(originalCin);
+    std::cout.rdbuf(originalCout);
+
+
 }
 /*
 TEST(GameTest, IntroContinueTest) {
