@@ -14,7 +14,7 @@ TEST(GameTests, testinitializer){
 }
 
 
-class Game : public Game {
+class MockGame : public Game {
 public:
     MOCK_METHOD(void, Intro, (), (override));
     MOCK_METHOD(void, NameSelection, (), (override));
@@ -50,8 +50,6 @@ TEST(GameTest, IntroContinueTest) {
 
     Game game;
 
-    EXPECT_CALL(game, Intro()).Times(1);
-
     game.Intro();
 
     std::string output = mockOutput.str();
@@ -60,7 +58,7 @@ TEST(GameTest, IntroContinueTest) {
 }
 
 TEST(GameTest, IntroInvalidTest) {
-    std::stringstream mockInput("a\n"); // Simulates user choosing to play
+    std::stringstream mockInput("a\n2\n"); // Simulates user choosing to play
     std::stringstream mockOutput;
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
@@ -71,7 +69,7 @@ TEST(GameTest, IntroInvalidTest) {
 
     std::string output = mockOutput.str();
     EXPECT_TRUE(output.find("Invalid Input. Enter option again:") != std::string::npos);
-    EXPECT_TRUE(output.find("You die.") == std::string::npos);
+    EXPECT_TRUE(output.find("You die.") != std::string::npos);
 }
 
 
@@ -129,7 +127,7 @@ TEST(GameTest, NameSelectionQuitTest) {
 }
 
 TEST(GameTest, NameSelectionInvalidInputTest) {
-    std::stringstream mockInput("John\na\n"); // Simulates user entering a name and confirming it
+    std::stringstream mockInput("John\na\n2\n"); // Simulates user entering a name and confirming it
     std::stringstream mockOutput;
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
@@ -140,6 +138,7 @@ TEST(GameTest, NameSelectionInvalidInputTest) {
 
     std::string output = mockOutput.str();
     EXPECT_TRUE(output.find("Invalid Input. Enter option again:") != std::string::npos);
+    EXPECT_TRUE(output.find("You have chosen to quit. Goodbye.") != std::string::npos);
 }
 
 
