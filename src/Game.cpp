@@ -150,6 +150,7 @@ void Game::bed_checkpoint(){
         } else {
 
             cout<<"You've chosen to battle"<<endl;
+            battle();
         }
     }
 
@@ -259,7 +260,8 @@ void Game::battle(){
         if (playerOne->getHealth()<=0){
             cout<<"OH YOU DEAD LOL\n";
             delete action;
-            exit(1);//later add a way to go back to bed checkpoint
+            bed_checkpoint();
+            //later add a way to go back to bed checkpoint
         }
         
 	delete action;
@@ -268,9 +270,12 @@ void Game::battle(){
 
     //player defeated the boss
     cout<<"\n\n\nCongrats you have defeated the Boss!!!!!\n"<<'\n'
-    <<"Because of your victory you will be rewarded 4 points!!!!!\n\n\n";
+    <<"Because of your victory you will be rewarded 20 points!!!!!\n\n\n";
     
-    player_points->addPoint(4);//reward is 4 pts
+    player_points->addPoint(20);//reward is 20 pts
+    player_weapon->change_weapon(player_points);
+    cout<<"Congrats your new current weapon is now"<<player_weapon->getWeapon()<<endl; 
+
     
     delete enemy;
 }       

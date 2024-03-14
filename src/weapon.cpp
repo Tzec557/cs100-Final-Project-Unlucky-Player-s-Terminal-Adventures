@@ -12,12 +12,24 @@ void Weapon::weaponAttack(Enemy* target){
     target->damageTaken(this->weapon_damage);
 }
 
-void Weapon::change_weapon(){
-    Point point;
-    if (point.getPoint()==101){
-        this->weapon_type="sword";
-        this->weapon_damage=12;
+void Weapon::change_weapon(Point* point){
+    if (point->getPoint()==20){
+        this->weapon_type="bat";
+        this->weapon_damage=-12;
     }
+    if (point->getPoint()==40){
+        this->weapon_type="steel bat";
+        this->weapon_damage=-26;
+    }
+    if (point->getPoint()==60){
+        this->weapon_type="sword";
+        this->weapon_damage=-36;
+    }
+    if (point->getPoint()==80){
+        this->weapon_type="light saber";
+        this->weapon_damage=-45;
+    }
+    
     
 }
 string Weapon::getWeapon(){
