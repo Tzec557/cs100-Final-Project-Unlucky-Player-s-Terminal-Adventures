@@ -159,13 +159,11 @@ void Game::printUserStats(){
 
     cout<<"Your current stats: "<<endl;
     
-    cout<<"\tWeapon and weapons damage: "<<endl<<endl 
+    cout<<"\tWeapon and weapons damage: "<<endl
         <<"\tcurrent weapon: "<<player_weapon->getWeapon()<<endl
-        <<"\tweapons damage: "<<player_weapon->getWeaponDamage()<<endl<<endl;
-    
-    cout<<"\tcurrent health: "<<playerOne->getHealth()<<endl<<endl;
-
-    cout<<"\tcurrent points: "<<player_points->getPoint()<<endl;
+        <<"\tweapons damage: "<<player_weapon->getWeaponDamage()<<endl;
+    cout<<"\tcurrent health: "<<playerOne->getHealth()<<endl;
+    cout<<"\tcurrent points: "<<player_points->getPoint()<<endl<<endl<<endl;
 
     return;
 }
