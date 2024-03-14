@@ -14,7 +14,7 @@ TEST(GameTests, testinitializer){
     delete g;
 }
 
-/*
+
 class MockGame : public Game {
 public:
     MOCK_METHOD(void, Intro, (), (override));
@@ -42,7 +42,7 @@ TEST(GameTest, IntroDeathTest) {
     EXPECT_TRUE(output.find("Invalid Input. Enter option again:") == std::string::npos);
     EXPECT_TRUE(output.find("You die.") != std::string::npos);
 }
-
+/*
 TEST(GameTest, IntroContinueTest) {
     std::stringstream mockInput("1\n"); // Simulates user choosing to play
     std::stringstream mockOutput;
