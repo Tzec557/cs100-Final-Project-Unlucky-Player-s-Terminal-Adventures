@@ -111,9 +111,9 @@ This diagram represents a dynamic and interactive narrative where player decisio
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
-> In our game the way you run it is my running the command in terminal
-> You will then be met with intro dialogue that will tell you about the story and how everything works
+ > Instructions on installing and running your application:
+>  In our game the way you run it is by running a command in the terminal.
+>  You will then be met with intro dialogue that will tell you about the story and how everything works
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
