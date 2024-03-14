@@ -10,7 +10,9 @@
 using namespace std;
 
 void Game::StartGame(){
-    cout << "Please type a number to select an option...\n" << "1 for Play, 2 for Exit\n";
+    cout << "Please type a number to select an option: \n" 
+	 << "\t1) Play"
+	 << "\t2) Exit\n";
     string userInput;
 
     if(cin >> userInput){
@@ -96,7 +98,7 @@ void Game::NameSelection(){
 
 void Game::PlayGame(){
     // intro and stats
-    cout << "You spawn in the world. You wake up.\n\n"
+    cout << "\n\nYou spawn in the world. You wake up.\n\n"
          << "Stats: \n"
          << "\tClass: Warrior\n"
          << "\tHealth: 20/20\n"
