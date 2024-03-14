@@ -29,6 +29,8 @@ void Game::StartGame(){
 
     NameSelection();
 
+    PlayGame();
+
     return;
 }
 
@@ -61,22 +63,26 @@ void Game::NameSelection(){
 
     //confirm
     cout << "Are you sure you would like to continue with the name " << userName << "?\n";
-    cout << "Press 1 to confirm, and anything else to quit\n";
+    cout << "Press 1 to confirm, and 2 to quit\n";
     string userInput;
+
     if(cin >> userInput){
-        if(userInput == "1"){
-            cout << "You have chosen to confirm. Welcome " << userName << ".\n";
-            PlayGame();
+
+        while (userInput != "1" && userInput != "2") {
+
+            cout << "Invalid Input. Enter option again\n";
+            cin >> userInput;
         }
-        else{
+
+        if (userInput == "2") {
             cout << "You have chosen to quit. Goodbye.\n";
             return;
         }
-    }
-    else{
-        cout << "Invalid input, exiting game.\n";
-        return;
-    }
+    } 
+
+    cout << "You have chosen to confirm. Welcome " << userName << ".\n";
+    return;
+
 }
 
 void Game::PlayGame(){
@@ -100,8 +106,56 @@ void Game::PlayGame(){
     bed_checkpoint();
 }
 
-void Game::battle(){
 
+void Game::bed_checkpoint(){
+    cout<<"You have spawned into your bed"<<endl;   
+
+    cout<<"if you want to check your current stats press s"<<endl
+        <<"else press any other character"<<endl;
+    
+    char buttonOption;
+    cin>>buttonOption; 
+    cin.clear();//flush buffer
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    if (buttonOption=='s'){
+        cout<<"these are your current stats"<<endl;
+        
+        cout<<"Weapon and weapons damage:"<<endl<<endl 
+            <<"current weapon: "<<player_weapon->getWeapon()<<endl
+            <<"weapons damage: "<<player_weapon->getWeaponDamage()<<endl<<endl;
+        
+        cout<<"current health:"<<playerOne->getHealth()<<endl<<endl;
+
+        cout<<"current points: "<<player_points->getPoint()<<endl;
+
+    }
+    
+    cout<<"Do you want to go into battle?"<<endl;
+    cout<<"press y for yes or n for no"<<endl;
+    
+    char battleOption;
+    cin>>battleOption;
+    cin.clear();//flush buffer
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    if (battleOption=='n'){
+        cout<<"ok"<<endl;
+        exit(1);
+    }
+    else if(battleOption=='y'){
+
+	cout << "Before entering battle";
+        battle();
+        //exit(1);
+    }
+    else{
+        exit(1);
+    }
+} 
+
+
+void Game::battle(){
 
     cout << "Crash at the beginning of the battle";
     
@@ -204,55 +258,5 @@ void Game::battle(){
     cout << "After enemy delete crash";
 
     bed_checkpoint();
-}
-
-
-void Game::bed_checkpoint(){
-    cout<<"You have spawned into your bed"<<endl;   
-
-    cout<<"if you want to check your current stats press s"<<endl
-        <<"else press any other character"<<endl;
-    
-    char buttonOption;
-    cin>>buttonOption; 
-    cin.clear();//flush buffer
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-    if (buttonOption=='s'){
-        cout<<"these are your current stats"<<endl;
-        
-        cout<<"Weapon and weapons damage:"<<endl<<endl 
-            <<"current weapon: "<<player_weapon->getWeapon()<<endl
-            <<"weapons damage: "<<player_weapon->getWeaponDamage()<<endl<<endl;
-        
-        cout<<"current health:"<<playerOne->getHealth()<<endl<<endl;
-
-        cout<<"current points: "<<player_points->getPoint()<<endl;
-
-    }
-    
-    cout<<"Do you want to go into battle?"<<endl;
-    cout<<"press y for yes or n for no"<<endl;
-    
-    char battleOption;
-    cin>>battleOption;
-    cin.clear();//flush buffer
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-    if (battleOption=='n'){
-        cout<<"ok"<<endl;
-        exit(1);
-    }
-    else if(battleOption=='y'){
-
-	cout << "Before entering battle";
-        battle();
-        //exit(1);
-    }
-    else{
-        exit(1);
-    }
-
-    
-}        
+}       
 //\n
