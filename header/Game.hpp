@@ -15,7 +15,7 @@ class Game{
     public:
         virtual ~Game(){
             delete playerOne;
-            //delete enemy;
+            delete enemy;
             delete player_points;
             delete player_weapon;   
         }
