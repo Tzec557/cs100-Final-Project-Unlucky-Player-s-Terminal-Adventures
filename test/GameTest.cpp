@@ -63,7 +63,7 @@ TEST(GameTest, IntroContinueTest) {
     std::stringstream mockInput("1\n"); // Simulates user choosing to play
     std::stringstream mockOutput;
 
-    std::streambuf* originalCin = std::cin.rdbuf();
+    std::streambuf* originalCin = std::cin.rdbuf(); //capture orginal stream buffer
     std::streambuf* originalCout = std::cout.rdbuf();
     
     std::cin.rdbuf(mockInput.rdbuf());
@@ -77,7 +77,7 @@ TEST(GameTest, IntroContinueTest) {
     EXPECT_TRUE(output.find("Invalid Input. Enter option again:") == std::string::npos);
     EXPECT_TRUE(output.find("You die.") == std::string::npos);
 
-    std::cin.rdbuf(originalCin);
+    std::cin.rdbuf(originalCin);//restore orginal stream buffer
     std::cout.rdbuf(originalCout);
 }
 
