@@ -1,6 +1,7 @@
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
 #include "../header/Enemy.hpp"
+#include "../header/Point.hpp"
 using namespace std;
 class Weapon {
     private:

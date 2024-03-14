@@ -13,7 +13,6 @@ void Weapon::weaponAttack(Enemy* target){
 }
 
 void Weapon::change_weapon(Point* point){
-    Point point;
     if (point->getPoint()==20){
         this->weapon_type="bat";
         this->weapon_damage=-12;
