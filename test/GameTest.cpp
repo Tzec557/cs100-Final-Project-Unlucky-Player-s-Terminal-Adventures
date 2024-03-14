@@ -38,18 +38,18 @@ TEST(GameTest, IntroDeathTest) {
     std::cout.rdbuf(mockOutput.rdbuf());
 
     //Game game;
-    MockGame game;//test add
+    Game game;//test add
     //test add
-    EXPECT_CALL(game, Intro()).Times(1);
-    EXPECT_CALL(game, PlayGame()).Times(0);  // Ensure PlayGame is not called
-    EXPECT_CALL(game, NameSelection()).Times(0);
+    //EXPECT_CALL(game, Intro()).Times(1);
+    //EXPECT_CALL(game, PlayGame()).Times(0);  // Ensure PlayGame is not called
+    //EXPECT_CALL(game, NameSelection()).Times(0);
     //
     game.Intro();
 
     std::string output = mockOutput.str();
 
     EXPECT_TRUE(output.find("Invalid Input. Enter option again:") == std::string::npos);
-    //EXPECT_TRUE(output.find("You die.") != std::string::npos);
+    EXPECT_TRUE(output.find("You die.") != std::string::npos);  //first was !=
      
      //test add
     // Restore original stream buffers
