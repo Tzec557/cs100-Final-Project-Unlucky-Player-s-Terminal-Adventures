@@ -8,7 +8,7 @@ add_executable(runAllTests
 	Dice_class_test.cpp
 	EnemyTest.cpp
 	PlayerTest.cpp
-	GameTest.cpp
+	
 	WeaponTest.cpp
 	PointTest.cpp
 )

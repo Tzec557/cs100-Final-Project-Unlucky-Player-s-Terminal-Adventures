@@ -11,6 +11,7 @@ using ::testing::Return;
 TEST(GameTests, testinitializer){
     Game *g = new Game();
     ASSERT_NE(g,nullptr);
+    delete g;
 }
 
 
