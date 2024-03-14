@@ -112,7 +112,7 @@ This diagram represents a dynamic and interactive narrative where player decisio
  ## Installation/Usage
  > Instructions on installing and running your application:
 >  In our game the way you run it is by running a command in the terminal.
->  You will then be met with intro dialogue that will tell you about the story and how everything works
+>  You will then be met with intro dialogue that will tell you about the story and how everything works. You type in the name for your player and then you go into the your bed will you can check your stats and go into battle or end.
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
