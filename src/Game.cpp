@@ -182,14 +182,14 @@ void Game::battle(){
         <<"\ts) start battle\n\n";
 
     if (cin >> choice){
-        while (buttonOption!='s' && buttonOption!='y' && buttonOption!='q'){
+        while (choice!='s' && choice!='y' && choice!='q'){
 
             cout << "Invalid Input. Enter option again: ";
             cin >> buttonOption;
             cout << endl;
         }
 
-        if (buttonOption == 'q'){
+        if (choice == 'q'){
 
             cout<<"you chose the easy way out smh\n";
             exit(0);
@@ -207,10 +207,8 @@ void Game::battle(){
         char button;
         cin>>button;
 
-        //cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-        cout << 
-        int playerRoll=action->rollDice();//player roll
+        int playerRoll = action->rollDice();//player roll
+	    
         if (button=='x'){
             cout<<"\n\nYou rolled "<<playerRoll<< "VS ";
         }
