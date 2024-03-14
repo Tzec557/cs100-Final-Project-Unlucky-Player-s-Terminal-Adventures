@@ -9,6 +9,8 @@ add_executable(runAllTests
 	EnemyTest.cpp
 	PlayerTest.cpp
 	GameTest.cpp
+	WeaponTest.cpp
+	PointTest.cpp
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)
