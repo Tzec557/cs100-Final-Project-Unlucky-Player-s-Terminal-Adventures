@@ -93,19 +93,18 @@ void Game::PlayGame(){
         <<"if the number you choose is less than the one the enemy rolled he gets to attacks and vice versa\n\n";
     enemy=new Enemy("housefly");
     bed_checkpoint();
-    delete enemy;
-    //battle();//delete later       
 }
 
 void Game::battle(){
+
+
+    cout << "Crash at the beginning of the battle";
     
     char choice;//ask if player wants to flee or fight 
     
     cout<<"you are now fighting "<<enemy->getName()
         <<" you can flee by pressing 'q' but you will die for being a coward!\n"
         <<"if you want to fight press any other character\n\n";
-
-
     
     cin>>choice;
     cin.clear();//flush buffer
@@ -124,6 +123,8 @@ void Game::battle(){
 
     //reinitialize the game and the boss hp here so that when user tries to play another game, it will work
 
+    enemy=new Enemy("housefly");    
+    cout << "initialize new enemy";
 
     while(enemy->getHealth()>0){//allows for player to keep fighting until he defeats the boss
         Dice *action=new Dice();//an intance of the dice object to see players action
@@ -193,15 +194,16 @@ void Game::battle(){
     
     player_points->addPoint(4);//reward is 4 pts
     
+    cout << "Before enemy delete crash";
+    delete enemy;
+    cout << "After enemy delete crash";
 
     bed_checkpoint();
-    
 }
 
 
 void Game::bed_checkpoint(){
-    cout<<"You have spawned into your bed"<<endl;
-     
+    cout<<"You have spawned into your bed"<<endl;   
 
     cout<<"if you want to check your current stats press s"<<endl
         <<"else press any other character"<<endl;
@@ -229,15 +231,18 @@ void Game::bed_checkpoint(){
     
     char battleOption;
     cin>>battleOption;
+    cin.clear();//flush buffer
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
     if (battleOption=='n'){
         cout<<"ok"<<endl;
         exit(1);
     }
     else if(battleOption=='y'){
+
+	cout << "Before entering battle";
         battle();
         //exit(1);
-
-
     }
     else{
         exit(1);
