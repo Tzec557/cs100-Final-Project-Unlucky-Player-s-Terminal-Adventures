@@ -5,7 +5,8 @@
 #include "../header/Enemy.hpp"
 #include "../header/dice.hpp"
 #include "limits"
-
+#include <vector>
+#include <string>
 
 using namespace std;
 
@@ -174,8 +175,15 @@ void Game::printUserStats(){
 void Game::battle(){
 
     char choice;//ask if player wants to flee or fight 
+    vector<string> enemyNames = {"Viper", "Shadow", "Doom", "Nightmare", "Darklord"};
+    Enemy *enemy = new Enemy();
+    enemy->setName(enemy->getRandomEnemyName(enemyNames));
+    enemy->setHealth(enemy->randomInRange(20, 50));
+    // enemy = new Enemy(enemy.getRandomEnemyName(enemyNames));
+    // // enemy.setName(enemy.getRandomEnemyName(enemyNames));
+    // enemy.setHealth(enemy.randomInRange(20, 50));  
 
-    enemy=new Enemy("housefly");    
+    //enemy=new Enemy("housefly");    
     
     cout<<"you are now fighting "<<enemy->getName() << "\n"
         <<"\tq) flee by pressing but you will die for being a coward!\n"
@@ -210,7 +218,7 @@ void Game::battle(){
         int playerRoll = action->rollDice();//player roll
 	    
         if (button=='x'){
-            cout<<"\n\nYou rolled "<<playerRoll<< "VS ";
+            cout<<"\n\nYou rolled "<<playerRoll<< " VS ";
         }
         
         int enemyRoll=action->rollDice();
