@@ -22,6 +22,7 @@ public:
     MOCK_METHOD(void, StartGame, (), (override));
     MOCK_METHOD(void, printUserStats, (), (override));
     MOCK_METHOD(void, bed_checkpoint, (), (override));
+    MOCK_METHOD(void, battle, (), (override));
 };
 
 
