@@ -58,7 +58,7 @@ TEST(GameTest, IntroDeathTest) {
 
 
 }
-/*
+
 TEST(GameTest, IntroContinueTest) {
     std::stringstream mockInput("1\n"); // Simulates user choosing to play
     std::stringstream mockOutput;
@@ -89,7 +89,7 @@ TEST(GameTest, IntroInvalidTest) {
     EXPECT_TRUE(output.find("You die.") != std::string::npos);
 }
 
-
+/*
 
 
 
