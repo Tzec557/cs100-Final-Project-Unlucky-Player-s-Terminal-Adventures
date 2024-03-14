@@ -14,7 +14,7 @@ TEST(GameTests, testinitializer){
 }
 
 
-class MockGame : public Game {
+class Game : public Game {
 public:
     MOCK_METHOD(void, Intro, (), (override));
     MOCK_METHOD(void, NameSelection, (), (override));
@@ -32,18 +32,14 @@ TEST(GameTest, IntroDeathTest) {
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
-    MockGame game;
-
-    EXPECT_CALL(game, Intro()).Times(1); // Expect Intro to be called
+    Game game;
 
     game.Intro();
 
     std::string output = mockOutput.str();
 
-    cout << output << endl;
-
-    EXPECT_TRUE(output.find("Invalid Input. Enter option again:") != std::string::npos);
-    EXPECT_TRUE(output.find("You die.") == std::string::npos);
+    EXPECT_TRUE(output.find("Invalid Input. Enter option again:") == std::string::npos);
+    EXPECT_TRUE(output.find("You die.") != std::string::npos);
 }
 
 TEST(GameTest, IntroContinueTest) {
@@ -52,15 +48,15 @@ TEST(GameTest, IntroContinueTest) {
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
-    MockGame game;
+    Game game;
 
     EXPECT_CALL(game, Intro()).Times(1);
 
     game.Intro();
 
     std::string output = mockOutput.str();
-    EXPECT_TRUE(output.find("Invalid Input. Enter option again:") != std::string::npos);
-    EXPECT_TRUE(output.find("You die.") != std::string::npos);
+    EXPECT_TRUE(output.find("Invalid Input. Enter option again:") == std::string::npos);
+    EXPECT_TRUE(output.find("You die.") == std::string::npos);
 }
 
 TEST(GameTest, IntroInvalidTest) {
@@ -69,15 +65,13 @@ TEST(GameTest, IntroInvalidTest) {
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
-    MockGame game;
-
-    EXPECT_CALL(game, Intro()).Times(1);
+    Game game;
 
     game.Intro();
 
     std::string output = mockOutput.str();
-    EXPECT_TRUE(output.find("Invalid Input. Enter option again:") == std::string::npos);
-    EXPECT_TRUE(output.find("You die.") != std::string::npos);
+    EXPECT_TRUE(output.find("Invalid Input. Enter option again:") != std::string::npos);
+    EXPECT_TRUE(output.find("You die.") == std::string::npos);
 }
 
 
@@ -90,19 +84,16 @@ TEST(GameTest, PrintUserStatsTest) {
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
-    MockGame game;
-
-    EXPECT_CALL(game, NameSelection()).Times(1); 
-    EXPECT_CALL(game, printUserStats()).Times(1);
+    Game game;
 
     game.NameSelection(); 
     game.printUserStats();
 
     std::string output = mockOutput.str();
-    EXPECT_TRUE(output.find("current weapon: stick") == std::string::npos);
-    EXPECT_TRUE(output.find("weapons damage: -5") == std::string::npos);
-    EXPECT_TRUE(output.find("current health: 20") == std::string::npos);
-    EXPECT_TRUE(output.find("current points: 0") == std::string::npos);
+    EXPECT_TRUE(output.find("current weapon: stick") != std::string::npos);
+    EXPECT_TRUE(output.find("weapons damage: -5") != std::string::npos);
+    EXPECT_TRUE(output.find("current health: 20") != std::string::npos);
+    EXPECT_TRUE(output.find("current points: 0") != std::string::npos);
 
 }
 
@@ -115,14 +106,12 @@ TEST(GameTest, NameSelectionTest) {
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
-    MockGame game;
-
-    EXPECT_CALL(game, NameSelection()).Times(1); // Expect NameSelection to be called
+    Game game;
 
     game.NameSelection();
 
     std::string output = mockOutput.str();
-    EXPECT_TRUE(output.find("Welcome John.") == std::string::npos);
+    EXPECT_TRUE(output.find("Welcome John.") != std::string::npos);
 }
 
 TEST(GameTest, NameSelectionQuitTest) {
@@ -131,14 +120,12 @@ TEST(GameTest, NameSelectionQuitTest) {
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
-    MockGame game;
-
-    EXPECT_CALL(game, NameSelection()).Times(1); // Expect NameSelection to be called
+    Game game;
 
     game.NameSelection();
 
     std::string output = mockOutput.str();
-    EXPECT_TRUE(output.find("You have chosen to quit. Goodbye.") == std::string::npos);
+    EXPECT_TRUE(output.find("You have chosen to quit. Goodbye.") != std::string::npos);
 }
 
 TEST(GameTest, NameSelectionInvalidInputTest) {
@@ -147,14 +134,12 @@ TEST(GameTest, NameSelectionInvalidInputTest) {
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
-    MockGame game;
-
-    EXPECT_CALL(game, NameSelection()).Times(1); // Expect NameSelection to be called
+    Game game;
 
     game.NameSelection();
 
     std::string output = mockOutput.str();
-    EXPECT_TRUE(output.find("Invalid Input. Enter option again:") == std::string::npos);
+    EXPECT_TRUE(output.find("Invalid Input. Enter option again:") != std::string::npos);
 }
 
 
@@ -172,10 +157,7 @@ TEST(GameTest, PlayGameTest) {
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
-    MockGame game;
-
-    EXPECT_CALL(game, NameSelection()).Times(1); // NameSelection is already executed, no more expectations
-    EXPECT_CALL(game, PlayGame()).Times(1); // Expect PlayGame to be called
+    Game game;
 
     // Call NameSelection first to simulate setting up the player's name
     game.NameSelection();
@@ -185,7 +167,7 @@ TEST(GameTest, PlayGameTest) {
 
     // Validate the outcome
     std::string output = mockOutput.str();
-    EXPECT_TRUE(output.find("You've chosen to battle") == std::string::npos); // Verify the specific output
+    EXPECT_TRUE(output.find("You've chosen to battle") != std::string::npos); // Verify the specific output
 }
 
 
@@ -202,10 +184,7 @@ TEST(GameTest, BedCheckpointStatsTest) {
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
-    MockGame game;
-
-    EXPECT_CALL(game, NameSelection()).Times(1); // NameSelection is already executed, no more expectations
-    EXPECT_CALL(game, bed_checkpoint()).Times(testing::AtLeast(1)); // Expect bed_checkpoint to be called at least once
+    Game game;
 
     game.NameSelection();
     game.bed_checkpoint();
@@ -213,10 +192,10 @@ TEST(GameTest, BedCheckpointStatsTest) {
     // Validate the outcome
     std::string output = mockOutput.str();
     // Fix the check to ensure it correctly verifies the presence of the expected output
-    EXPECT_TRUE(output.find("current weapon: stick") == std::string::npos);
-    EXPECT_TRUE(output.find("weapons damage: -5") == std::string::npos);
-    EXPECT_TRUE(output.find("current health: 20") == std::string::npos);
-    EXPECT_TRUE(output.find("current points: 0") == std::string::npos);
+    EXPECT_TRUE(output.find("current weapon: stick") != std::string::npos);
+    EXPECT_TRUE(output.find("weapons damage: -5") != std::string::npos);
+    EXPECT_TRUE(output.find("current health: 20") != std::string::npos);
+    EXPECT_TRUE(output.find("current points: 0") != std::string::npos);
 }
 
 
@@ -230,10 +209,7 @@ TEST(GameTest, BedCheckpointPlayTest) {
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
-    MockGame game;
-
-    EXPECT_CALL(game, NameSelection()).Times(1); // NameSelection is already executed, no more expectations
-    EXPECT_CALL(game, bed_checkpoint()).Times(testing::AtLeast(1)); // Expect bed_checkpoint to be called at least once
+    Game game;
 
     game.NameSelection();
     game.bed_checkpoint();
@@ -241,7 +217,7 @@ TEST(GameTest, BedCheckpointPlayTest) {
     // Validate the outcome
     std::string output = mockOutput.str();
     // Fix the check to ensure it correctly verifies the presence of the expected output
-    EXPECT_TRUE(output.find("You've chosen to battle") == std::string::npos);
+    EXPECT_TRUE(output.find("You've chosen to battle") != std::string::npos);
 }
 
 
@@ -256,10 +232,7 @@ TEST(GameTest, BedCheckpointQuitTest) {
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
-    MockGame game;
-
-    EXPECT_CALL(game, NameSelection()).Times(1); // NameSelection is already executed, no more expectations
-    EXPECT_CALL(game, bed_checkpoint()).Times(testing::AtLeast(1)); // Expect bed_checkpoint to be called at least once
+    Game game;
 
     // Call NameSelection first to simulate setting up the player's name
     game.NameSelection();
@@ -270,7 +243,7 @@ TEST(GameTest, BedCheckpointQuitTest) {
     // Validate the outcome
     std::string output = mockOutput.str();
     // Fix the check to ensure it correctly verifies the presence of the expected output
-    EXPECT_TRUE(output.find("You have chosen to quit. Goodbye.") == std::string::npos);
+    EXPECT_TRUE(output.find("You have chosen to quit. Goodbye.") != std::string::npos);
 }
 
 
@@ -285,10 +258,7 @@ TEST(GameTest, BattleQuitTest) {
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
-    MockGame game;
-
-    EXPECT_CALL(game, NameSelection()).Times(1); // NameSelection is already executed, no more expectations
-    EXPECT_CALL(game, battle()).Times(1); // Expect bed_checkpoint to be called at least once
+    Game game;
 
     // Call NameSelection first to simulate setting up the player's name
     game.NameSelection();
@@ -299,7 +269,7 @@ TEST(GameTest, BattleQuitTest) {
     // Validate the outcome
     std::string output = mockOutput.str();
     // Fix the check to ensure it correctly verifies the presence of the expected output
-    EXPECT_TRUE(output.find("you chose the easy way out smh") == std::string::npos);
+    EXPECT_TRUE(output.find("you chose the easy way out smh") != std::string::npos);
 }
 
 TEST(GameTest, BattleStartTest) {
@@ -312,10 +282,7 @@ TEST(GameTest, BattleStartTest) {
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
-    MockGame game;
-
-    EXPECT_CALL(game, NameSelection()).Times(1); // NameSelection is already executed, no more expectations
-    EXPECT_CALL(game, battle()).Times(1); // Expect bed_checkpoint to be called at least once
+    Game game;
 
     // Call NameSelection first to simulate setting up the player's name
     game.NameSelection();
@@ -326,7 +293,7 @@ TEST(GameTest, BattleStartTest) {
     // Validate the outcome
     std::string output = mockOutput.str();
     // Fix the check to ensure it correctly verifies the presence of the expected output
-    EXPECT_TRUE(output.find("your battle begins now!") == std::string::npos);
+    EXPECT_TRUE(output.find("your battle begins now!") != std::string::npos);
 }
 
 
