@@ -68,22 +68,32 @@ TEST(GameTest, NameSelectionTest) {
 
 
 TEST(GameTest, PlayGameTest) {
-    std::stringstream mockInput("y\n"); // Simulates user starting a battle immediately
+    // Prepare input stream to simulate both name selection and the initial action in PlayGame
+    std::stringstream mockInput;
+    mockInput << "John\n1\n"; // Inputs for NameSelection: name entry and confirmation
+    mockInput << "y\n"; // Simulate starting a battle immediately in PlayGame
+
     std::stringstream mockOutput;
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
     MockGame game;
 
-    // Expectations
+    // Call NameSelection first to simulate setting up the player's name
+    game.NameSelection();
+    
+    // Reset expectations specifically for PlayGame testing
     EXPECT_CALL(game, Intro()).Times(0);
-    EXPECT_CALL(game, NameSelection()).Times(0);
+    EXPECT_CALL(game, NameSelection()).Times(0); // NameSelection is already executed, no more expectations
     EXPECT_CALL(game, PlayGame()).Times(1); // Expect PlayGame to be called
-    EXPECT_CALL(game, bed_checkpoint()).Times(testing::AtLeast(1));
+    EXPECT_CALL(game, bed_checkpoint()).Times(testing::AtLeast(1)); // Expect bed_checkpoint to be called at least once
+
+    // Execute the PlayGame method which now operates with a selected name
     game.PlayGame();
 
+    // Validate the outcome
     std::string output = mockOutput.str();
-    EXPECT_TRUE(output.find("You've chosen to battle") == std::string::npos);
+    EXPECT_TRUE(output.find("You've chosen to battle") == std::string::npos); // Verify the specific output
 }
 
 
