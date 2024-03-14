@@ -10,7 +10,9 @@
 using namespace std;
 
 void Game::StartGame(){
-    cout << "Please type a number to select an option...\n" << "1 for Play, 2 for Exit\n";
+    cout << "Please type a number to select an option: \n" 
+	 << "\t1) Play"
+	 << "\t2) Exit\n";
     string userInput;
 
     if(cin >> userInput){
@@ -96,7 +98,7 @@ void Game::NameSelection(){
 
 void Game::PlayGame(){
     // intro and stats
-    cout << "You spawn in the world. You wake up.\n\n"
+    cout << "\n\nYou spawn in the world. You wake up.\n\n"
          << "Stats: \n"
          << "\tClass: Warrior\n"
          << "\tHealth: 20/20\n"
@@ -139,7 +141,7 @@ void Game::bed_checkpoint(){
 
         if (buttonOption=='s'){
 
-            printUserStats()
+            printUserStats();
         } else if (buttonOption == 'q'){
 
             cout << "You have chosen to quit. Goodbye.\n";
@@ -180,14 +182,14 @@ void Game::battle(){
         <<"\ts) start battle\n\n";
 
     if (cin >> choice){
-        while (buttonOption!='s' && buttonOption!='y' && buttonOption!='q'){
+        while (choice!='s' && choice!='y' && choice!='q'){
 
             cout << "Invalid Input. Enter option again: ";
-            cin >> buttonOption;
+            cin >> choice;
             cout << endl;
         }
 
-        if (buttonOption == 'q'){
+        if (choice == 'q'){
 
             cout<<"you chose the easy way out smh\n";
             exit(0);
@@ -205,16 +207,14 @@ void Game::battle(){
         char button;
         cin>>button;
 
-        //cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-        cout << 
-        int playerRoll=action->rollDice();//player roll
+        int playerRoll = action->rollDice();//player roll
+	    
         if (button=='x'){
             cout<<"\n\nYou rolled "<<playerRoll<< "VS ";
         }
         
         int enemyRoll=action->rollDice();
-        cout<<enemy->getName()<<" rolled "<<enemyRoll<<'\n\n';
+        cout<<enemy->getName()<<" rolled "<<enemyRoll<<"'\n\n'";
         
 
         if (playerRoll > enemyRoll){//if user choice is greater then he has a chance to attack

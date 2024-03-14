@@ -13,19 +13,19 @@ using namespace std;
 
 class Game{
     public:
-        ~Game(){
+        virtual ~Game(){
             delete playerOne;
             delete enemy;
             delete player_points;
             delete player_weapon;   
         }
-        void StartGame();
-        void Intro();
-        void NameSelection();
-        void PlayGame();
-	void printUserStats();
-        void battle();
-        void bed_checkpoint();
+        virtual void StartGame();
+        virtual void Intro();
+        virtual void NameSelection();
+        virtual void PlayGame();
+	virtual void printUserStats();
+        virtual void battle();
+        virtual void bed_checkpoint();
     
     private:
         Player *playerOne=nullptr;
