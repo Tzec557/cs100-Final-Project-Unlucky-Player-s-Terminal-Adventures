@@ -122,22 +122,6 @@ TEST(GameTest, NameSelectionTest) {
     EXPECT_TRUE(output.find("Welcome John.") == std::string::npos);
 }
 
-TEST(GameTest, NameSelectionTest) {
-    std::stringstream mockInput("John\n2\n"); // Simulates user entering a name and confirming it
-    std::stringstream mockOutput;
-    std::cin.rdbuf(mockInput.rdbuf());
-    std::cout.rdbuf(mockOutput.rdbuf());
-
-    MockGame game;
-
-    EXPECT_CALL(game, NameSelection()).Times(1); // Expect NameSelection to be called
-
-    game.NameSelection();
-
-    std::string output = mockOutput.str();
-    EXPECT_TRUE(output.find("You have chosen to quit. Goodbye.") == std::string::npos);
-}
-
 TEST(GameTest, NameSelectionQuitTest) {
     std::stringstream mockInput("John\n2\n"); // Simulates user entering a name and confirming it
     std::stringstream mockOutput;
