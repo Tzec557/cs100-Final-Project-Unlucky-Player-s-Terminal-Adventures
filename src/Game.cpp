@@ -12,18 +12,24 @@ using namespace std;
 void Game::StartGame(){
     cout << "Please type a number to select an option...\n" << "1 for Play, 2 for Exit\n";
     string userInput;
+
     if(cin >> userInput){
-        if(userInput == "1"){
-            Intro();        
+
+        while (userInput != "1" || userInput != "2") {
+            cout << "Invalid Input. Enter option again\n";
+            cin >> userInput;
         }
-        else{
-            return;
+
+        if(userInput == "2"){
+            return;  
         }
     }
-    else{
-        cout << "Invalid Input. Exiting\n";
-        exit(1);
-    }
+
+    Intro();
+
+    NameSelection();
+
+    return;
 }
 
 void Game::Intro(){
@@ -32,19 +38,18 @@ void Game::Intro(){
 
     string userInput;
     if(cin >> userInput){
-        if(userInput == "1"){
-            cout << "You choose to fight the bosses to cure your cancer. Good luck.\n";
-            NameSelection();        
+
+        while (userInput != "1" || userInput != "2") {
+
+            cout << "Invalid Input. Enter option again\n";
+            cin >> userInput;
         }
-        else{
+
+        if (userInput == "2") {
             cout << "You die.\n";
             return;
         }
     } 
-    else{
-        cout << "Invalid Input. Exiting\n";
-        exit(1);
-    }
 }
 
 void Game::NameSelection(){
