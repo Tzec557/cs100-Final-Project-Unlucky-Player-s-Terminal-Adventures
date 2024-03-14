@@ -7,10 +7,9 @@
 ## Project Description
 
  * As a group, we believed this project would be interesting because we all grew up playing video games. We believed it would be fun to recreate the nostalgia of popular games we played such as Oregon trail, Pokemon and other RPG games through coding. This project also seems important for our future projects/endeavors, serving as an introduction into game design. 
- * For the coding language we will be using C++. We will also be using Github to distribute our game. We might include a file saving system through the use of Json file structure. The main means of communication between the user and the system will be through the terminal screen. 
+ * For the coding language we will be using C++. We will also be using Github to distribute our game. The main means of communication between the user and the system will be through the terminal screen. 
  * For input/output, users will be able to input their choice of action through text in the terminal. All the outputs will be visible to the users through the terminal screen in a form of text feedback. 
- * For features, we will create a text-based RPG game featuring characters equipped with different roles and customizable actions and attributes. 
-    * These roles include characters such as Warriors, Mages and more. 
+ * For features, we will create a text-based RPG game featuring characters equipped with different weapons and customizable actions and attributes.  
     * Players can personalize their characters by changing their attributes and traits through stats points, earned via the leveling combat system. Within our system, users can choose actions displayed on the terminal, like fighting, running away, or changing equipment. 
     * Character progression involves a combat system where battles with other non-playable characters allows to gain experience points to level up. We will introduce bosses and a narrative for the user characters for an immersive experience.
 
