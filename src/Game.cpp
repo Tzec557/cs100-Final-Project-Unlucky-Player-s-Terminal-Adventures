@@ -141,7 +141,7 @@ void Game::bed_checkpoint(){
 
         if (buttonOption=='s'){
 
-            printUserStats()
+            printUserStats();
         } else if (buttonOption == 'q'){
 
             cout << "You have chosen to quit. Goodbye.\n";
@@ -185,7 +185,7 @@ void Game::battle(){
         while (choice!='s' && choice!='y' && choice!='q'){
 
             cout << "Invalid Input. Enter option again: ";
-            cin >> buttonOption;
+            cin >> choice;
             cout << endl;
         }
 
@@ -214,7 +214,7 @@ void Game::battle(){
         }
         
         int enemyRoll=action->rollDice();
-        cout<<enemy->getName()<<" rolled "<<enemyRoll<<'\n\n';
+        cout<<enemy->getName()<<" rolled "<<enemyRoll<<"'\n\n'";
         
 
         if (playerRoll > enemyRoll){//if user choice is greater then he has a chance to attack
