@@ -208,7 +208,7 @@ TEST(GameTest, NameSelectionInvalidInputTest) {
     std::cout.rdbuf(originalCout);
 }
 
-/*
+
 
 
 TEST(GameTest, PlayGameTest) {
@@ -216,6 +216,9 @@ TEST(GameTest, PlayGameTest) {
     std::stringstream mockInput;
     mockInput << "John\n1\n"; // Inputs for NameSelection: name entry and confirmation
     mockInput << "y\n"; // Simulate starting a battle immediately in PlayGame
+
+    std::streambuf* originalCin = std::cin.rdbuf();
+    std::streambuf* originalCout = std::cout.rdbuf();
 
 
 
@@ -238,9 +241,12 @@ TEST(GameTest, PlayGameTest) {
     // Validate the outcome
     std::string output = mockOutput.str();
     EXPECT_TRUE(output.find("You have reached 100 points and won the game!!!") != std::string::npos); // Verify the specific output
+    
+    std::cin.rdbuf(originalCin);
+    std::cout.rdbuf(originalCout);
 }
 
-
+/*
 
 TEST(GameTest, BedCheckpointStatsTest) {
     // Prepare input stream to simulate name selection and choosing to print stats
