@@ -8,6 +8,7 @@ add_executable(runAllTests
 	Dice_class_test.cpp
 	EnemyTest.cpp
 	PlayerTest.cpp
+	GameTest.cpp
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)
