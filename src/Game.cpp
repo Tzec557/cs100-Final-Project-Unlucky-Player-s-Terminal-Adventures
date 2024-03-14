@@ -16,13 +16,16 @@ void Game::StartGame(){
     if(cin >> userInput){
 
         while (userInput != "1" && userInput != "2") {
-            cout << "Invalid Input. Enter option again\n";
+            cout << "Invalid Input. Enter option again: ";
             cin >> userInput;
+            cout << endl;
         }
 
         if(userInput == "2"){
+
             return;  
         } else {
+
             Intro();
 
             NameSelection();
@@ -36,15 +39,17 @@ void Game::StartGame(){
 
 void Game::Intro(){
     cout << "Welcome to Unlucky Player's Terminal Adventures. You have been transported to a hospital. In this game, you have a terminal cancer! Hooray! Your goal for this game is to beat as many boss as possible and earn 100 points to defeat the cancer!\n"        
-         << "Press 1 if you would like to enter the game to heal the cancer, otherwise press 2.\n";
+         << "\t1) if you would like to enter the game to heal the cancer\n" 
+         << "\t2) quit\n\n\n";
 
     string userInput;
     if(cin >> userInput){
 
         while (userInput != "1" && userInput != "2") {
 
-            cout << "Invalid Input. Enter option again\n";
+            cout << "Invalid Input. Enter option again: ";
             cin >> userInput;
+            cout << endl;
         }
 
         if (userInput == "2") {
@@ -62,23 +67,27 @@ void Game::NameSelection(){
     playerOne = new Player(userName);
 
     //confirm
-    cout << "Are you sure you would like to continue with the name " << userName << "?\n";
-    cout << "Press 1 to confirm, and 2 to quit\n";
+    cout << "\n\nAre you sure you would like to continue with the name " << userName << "?\n";
+    cout << "Options: \n"
+         << "\t1) confirm\n"
+         << "\t2) quit\n\n\n";
+
     string userInput;
 
     if(cin >> userInput){
 
         while (userInput != "1" && userInput != "2") {
 
-            cout << "Invalid Input. Enter option again\n";
+            cout << "Invalid Input. Enter option again: ";
             cin >> userInput;
+            cout << endl;
         }
 
         if (userInput == "2") {
-            cout << "You have chosen to quit. Goodbye.\n";
+            cout << "You have chosen to quit. Goodbye.\n\n";
             exit(0);
         } else {
-            cout << "You have chosen to confirm. Welcome " << userName << ".\n";
+            cout << "You have chosen to confirm. Welcome " << userName << ".\n\n";
         }
     } 
     return;
@@ -87,21 +96,21 @@ void Game::NameSelection(){
 
 void Game::PlayGame(){
     // intro and stats
-    cout << "You spawn in the world. You wake up.\n"
+    cout << "You spawn in the world. You wake up.\n\n"
          << "Stats: \n"
-         << "Class: Warrior\n"
-         << "Health: 20/20\n"
-         << "Attack: 2\n"
-         << "Defense: 1\n";
+         << "\tClass: Warrior\n"
+         << "\tHealth: 20/20\n"
+         << "\tAttack: 2\n"
+         << "\tDefense: 1\n\n\n";
     // intro to boss
     cout << "You look out your bedroom window and realize you have been transported to a different world.\n"
          << "You get out of bed...\n"
          << "As you are about to walk out of your room, you encounter your first enemy...\n"
-         << "Your first enemy is a housefly. Defeat it to gain points to cure your illness\n\n";
+         << "Your first enemy is a housefly. Defeat it to gain points to cure your illness\n\n\n";
     
     //rules to battling
     cout<<"In battle you will choose a number 1-6 and the Enemy will roll a dice\n"
-        <<"if the number you choose is less than the one the enemy rolled he gets to attacks and vice versa\n\n";
+        <<"if the number you choose is less than the one the enemy rolled he gets to attacks and vice versa\n\n\n";
 
     while (true) {
         bed_checkpoint();
@@ -112,23 +121,25 @@ void Game::PlayGame(){
 
 void Game::bed_checkpoint(){
 
-    cout<<"You have spawned into your bed"<<endl;   
-    cout<<"if you want to check your current stats press s"<<endl
-        <<"press y to start battle"<<endl
-        <<"press q to end game"<<endl;
+    cout<<"You have spawned into your bed\n\n";
+    cout<<"Options:\n"
+        <<"\ts) print your stats\n"
+        <<"\ty) start battle\n"
+        <<"\tq) quit\n\n";
     
     char buttonOption;
 
     if (cin >> buttonOption){
         while (buttonOption!='s' && buttonOption!='y' && buttonOption!='q'){
 
-            cout << "Invalid Input. Enter option again\n";
+            cout << "Invalid Input. Enter option again: ";
             cin >> buttonOption;
+            cout << endl;
         }
 
         if (buttonOption=='s'){
 
-            printUserStats();
+            printUserStats()
         } else if (buttonOption == 'q'){
 
             cout << "You have chosen to quit. Goodbye.\n";
@@ -144,15 +155,15 @@ void Game::bed_checkpoint(){
 
 void Game::printUserStats(){
 
-    cout<<"these are your current stats"<<endl;
+    cout<<"Your current stats: "<<endl;
     
-    cout<<"Weapon and weapons damage:"<<endl<<endl 
-        <<"current weapon: "<<player_weapon->getWeapon()<<endl
-        <<"weapons damage: "<<player_weapon->getWeaponDamage()<<endl<<endl;
+    cout<<"\tWeapon and weapons damage: "<<endl<<endl 
+        <<"\tcurrent weapon: "<<player_weapon->getWeapon()<<endl
+        <<"\tweapons damage: "<<player_weapon->getWeaponDamage()<<endl<<endl;
     
-    cout<<"current health:"<<playerOne->getHealth()<<endl<<endl;
+    cout<<"\tcurrent health:"<<playerOne->getHealth()<<endl<<endl;
 
-    cout<<"current points: "<<player_points->getPoint()<<endl;
+    cout<<"\tcurrent points: "<<player_points->getPoint()<<endl;
 
     return;
 }
@@ -163,52 +174,47 @@ void Game::battle(){
     char choice;//ask if player wants to flee or fight 
 
     enemy=new Enemy("housefly");    
-    cout << "initialize new enemy";
     
-    cout<<"you are now fighting "<<enemy->getName()
-        <<" you can flee by pressing 'q' but you will die for being a coward!\n"
-        <<"if you want to fight press any other character\n\n";
-    cin>>choice;
-    cin.clear();//flush buffer
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    
-    if (choice=='q'){
-        //player_points->addPoint(-1*player_points->getPoint());
-        cout<<"you chose the easy way out smh\n";
-        exit(1);
+    cout<<"you are now fighting "<<enemy->getName() << "\n"
+        <<"\tq) flee by pressing but you will die for being a coward!\n"
+        <<"\ts) start battle\n\n";
+
+    if (cin >> choice){
+        while (buttonOption!='s' && buttonOption!='y' && buttonOption!='q'){
+
+            cout << "Invalid Input. Enter option again: ";
+            cin >> buttonOption;
+            cout << endl;
+        }
+
+        if (buttonOption == 'q'){
+
+            cout<<"you chose the easy way out smh\n";
+            exit(0);
+        } else {
+
+            cout<<"your battle begins now!\n\n";
+        }
     }
-    else{
-        cout<<"your battle begins now!\n\n";
-       
-    }
+
 
     while(enemy->getHealth()>0){//allows for player to keep fighting until he defeats the boss
         Dice *action=new Dice();//an intance of the dice object to see players action
         
-        cout<<"press x to roll the dice to see if you have to fight or defend, or press q to exit"<<endl;
+        cout<<"\n\n\npress x to roll the dice to see if you have to fight or defend"<<endl;
         char button;
         cin>>button;
 
         //cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-
+        cout << 
         int playerRoll=action->rollDice();//player roll
-        while(button != 'x' && button != 'q'){
-            cout<<"wrong input, retype your input again "<<endl;
-            cin >> button;
-        }
-        if (button =='x'){
-            cout<<"you rolled "<<playerRoll<<endl<<endl;
-        }
-        else if (button =='q'){
-            cout<<"you quit the game successfully "<<endl;
-            exit(1);
+        if (button=='x'){
+            cout<<"\n\nYou rolled "<<playerRoll<< "VS ";
         }
         
-        cout<<enemy->getName()<< " will roll now"<<endl;//enemy roll
         int enemyRoll=action->rollDice();
-        cout<<enemy->getName()<<" rolled "<<enemyRoll<<'\n';
-
+        cout<<enemy->getName()<<" rolled "<<enemyRoll<<'\n\n';
         
 
         if (playerRoll > enemyRoll){//if user choice is greater then he has a chance to attack
@@ -247,15 +253,16 @@ void Game::battle(){
             delete action;
             exit(1);//later add a way to go back to bed checkpoint
         }
+        
 	delete action;
 
     }
+
     //player defeated the boss
-    cout<<"congrats you have defeated the Boss!!!!!\n"<<'\n'
-    <<"Because of your victory you will be rewarded random points from 1 to 50 !!!!!" << endl;
-    int addPlayerPoint = rand() % 50 + 1;
-    cout << "Congrat you got "<< addPlayerPoint << " points !!!!!" << endl;
-    player_points->addPoint(4);//reward is random points from 1 to 50
+    cout<<"\n\n\nCongrats you have defeated the Boss!!!!!\n"<<'\n'
+    <<"Because of your victory you will be rewarded 4 points!!!!!\n\n\n";
+    
+    player_points->addPoint(4);//reward is 4 pts
     
     delete enemy;
 }       
