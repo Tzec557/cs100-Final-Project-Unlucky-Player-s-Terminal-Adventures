@@ -14,10 +14,24 @@ using namespace std;
 class Game{
     public:
         virtual ~Game(){
-            delete playerOne;
-            delete enemy;
-            delete player_points;
-            delete player_weapon;   
+            if (playerOne != nullptr){
+                delete playerOne;
+                playerOne=nullptr;
+            }
+            //if (enemy !=nullptr){ 
+                //delete enemy; 
+                //enemy=nullptr;
+            //}
+            
+            if (player_points !=nullptr){   
+                delete player_points;
+                player_points=nullptr;
+            }
+            
+            if (player_weapon != nullptr){  
+                delete player_weapon;
+                player_weapon=nullptr;
+            }
         }
         virtual void StartGame();
         virtual void Intro();
@@ -33,5 +47,5 @@ class Game{
         Enemy *enemy=nullptr;
         Point *player_points=new Point();
         Weapon *player_weapon=new Weapon();
-	bool isGameRunning = true;
+	    bool isGameRunning = true;
 };

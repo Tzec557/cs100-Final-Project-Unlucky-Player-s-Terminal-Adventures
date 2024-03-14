@@ -7,6 +7,8 @@ TEST(DiceTests, testNullInitializer) {
 
 	ASSERT_NE(d, nullptr);
 
+    delete d;
+
 }
 
 TEST(DiceTests, testRollDice) {
@@ -16,6 +18,8 @@ TEST(DiceTests, testRollDice) {
 
     // Check if rollResult is between 1 and 6, inclusive
     EXPECT_TRUE(rollResult >= 1 && rollResult <= 6);
+
+    delete d;
 }
 
 

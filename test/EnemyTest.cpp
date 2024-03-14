@@ -7,6 +7,7 @@
 TEST(EnemyTests, testinitializer) {
     Enemy *e = new Enemy();
     ASSERT_NE(e, nullptr);
+    delete e;
 }
 
 TEST(EnemyTests, DefaultConstructorTest) {

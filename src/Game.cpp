@@ -125,9 +125,9 @@ void Game::PlayGame(){
    
     while (player_points->getPoint() < 100 && isGameRunning) {
        	bed_checkpoint();
-	if (!isGameRunning) break;
-	battle();
-	if (!isGameRunning) break;
+	    if (!isGameRunning) break;
+	    battle();
+	    if (!isGameRunning) break;
     }
 
     if (player_points->getPoint() >= 100){
@@ -284,7 +284,7 @@ void Game::battle(){
             cout<<"OH YOU DEAD LOL\n";
         }
         
-	delete action;
+	    delete action;
 
     }
 
