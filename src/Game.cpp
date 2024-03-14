@@ -118,8 +118,9 @@ void Game::PlayGame(){
     //rules to battling
     cout<<"In battle you will choose a number 1-6 and the Enemy will roll a dice\n"
         <<"if the number you choose is less than the one the enemy rolled he gets to attacks and vice versa\n\n\n";
-    while (isGameRunning) {
-   	 while (player_points->getPoint() < 100) {
+   
+    while (player_points->getPoint() < 100) {
+	while (isGameRunning) {
         	bed_checkpoint();
 		battle();
 		if (!isGameRunning) break;
