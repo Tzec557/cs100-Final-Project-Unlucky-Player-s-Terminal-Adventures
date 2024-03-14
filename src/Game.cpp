@@ -145,7 +145,7 @@ void Game::bed_checkpoint(){
         } else if (buttonOption == 'q'){
 
             cout << "You have chosen to quit. Goodbye.\n";
-            exit(0);
+            return;
         } else {
 
             cout<<"You've chosen to battle"<<endl;
@@ -192,7 +192,7 @@ void Game::battle(){
         if (choice == 'q'){
 
             cout<<"you chose the easy way out smh\n";
-            exit(0);
+            return;
         } else {
 
             cout<<"your battle begins now!\n\n";
