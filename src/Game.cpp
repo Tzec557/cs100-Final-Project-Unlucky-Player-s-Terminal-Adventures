@@ -115,10 +115,13 @@ void Game::PlayGame(){
     cout<<"In battle you will choose a number 1-6 and the Enemy will roll a dice\n"
         <<"if the number you choose is less than the one the enemy rolled he gets to attacks and vice versa\n\n\n";
 
-    while (true) {
+    while (player_points->getPoint() < 100) {
         bed_checkpoint();
         battle();
     }
+    cout << "You have reached 100 points and won the game!!!\n"
+         << "After enduring countless chemotherapy sessions, braving the trials of the Bosses, you finally stand victorious at the Cancer Treatment Center.\n"
+         << "Though the road was tough and the challenges many, you emerged stronger, wiser, and filled with hope for the future. The sun shines brighter, the colors seem more vivid, and you know that you are unstoppable.\n";
 }
 
 
@@ -259,7 +262,6 @@ void Game::battle(){
 
         if (playerOne->getHealth()<=0){
             cout<<"OH YOU DEAD LOL\n";
-            delete action;
             bed_checkpoint();
             //later add a way to go back to bed checkpoint
         }
