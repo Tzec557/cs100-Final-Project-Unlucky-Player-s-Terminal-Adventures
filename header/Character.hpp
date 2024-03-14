@@ -13,6 +13,7 @@ class Character{
         void setName(string name);
         int getHealth();
         void addHealth(int health);
+        void setHealth(int health);
 
 
     private:

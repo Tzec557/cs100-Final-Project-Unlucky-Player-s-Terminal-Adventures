@@ -27,3 +27,7 @@ int Character::getHealth(){
 void Character::addHealth(int num){
     _health = _health + num;
 }
+
+void Character::setHealth(int num){
+    _health = num;
+}
