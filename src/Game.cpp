@@ -5,7 +5,8 @@
 #include "../header/Enemy.hpp"
 #include "../header/dice.hpp"
 #include "limits"
-
+#include <vector>
+#include <string>
 
 using namespace std;
 
@@ -149,6 +150,7 @@ void Game::bed_checkpoint(){
         } else {
 
             cout<<"You've chosen to battle"<<endl;
+            battle();
         }
     }
 
@@ -174,8 +176,15 @@ void Game::printUserStats(){
 void Game::battle(){
 
     char choice;//ask if player wants to flee or fight 
+    vector<string> enemyNames = {"Viper", "Shadow", "Doom", "Nightmare", "Darklord"};
+    Enemy *enemy = new Enemy();
+    enemy->setName(enemy->getRandomEnemyName(enemyNames));
+    enemy->setHealth(enemy->randomInRange(20, 50));
+    // enemy = new Enemy(enemy.getRandomEnemyName(enemyNames));
+    // // enemy.setName(enemy.getRandomEnemyName(enemyNames));
+    // enemy.setHealth(enemy.randomInRange(20, 50));  
 
-    enemy=new Enemy("housefly");    
+    //enemy=new Enemy("housefly");    
     
     cout<<"you are now fighting "<<enemy->getName() << "\n"
         <<"\tq) Flee by pressing but you will die for being a coward!\n"
@@ -210,7 +219,7 @@ void Game::battle(){
         int playerRoll = action->rollDice();//player roll
 	    
         if (button=='x'){
-            cout<<"\n\nYou rolled "<<playerRoll<< "VS ";
+            cout<<"\n\nYou rolled "<<playerRoll<< " VS ";
         }
         
         int enemyRoll=action->rollDice();
@@ -251,7 +260,8 @@ void Game::battle(){
         if (playerOne->getHealth()<=0){
             cout<<"OH YOU DEAD LOL\n";
             delete action;
-            exit(0);//later add a way to go back to bed checkpoint
+            bed_checkpoint();
+            //later add a way to go back to bed checkpoint
         }
         
 	delete action;
@@ -260,9 +270,12 @@ void Game::battle(){
 
     //player defeated the boss
     cout<<"\n\n\nCongrats you have defeated the Boss!!!!!\n"<<'\n'
-    <<"Because of your victory you will be rewarded 4 points!!!!!\n\n\n";
+    <<"Because of your victory you will be rewarded 20 points!!!!!\n\n\n";
     
-    player_points->addPoint(4);//reward is 4 pts
+    player_points->addPoint(20);//reward is 20 pts
+    player_weapon->change_weapon(player_points);
+    cout<<"Congrats your new current weapon is now"<<player_weapon->getWeapon()<<endl; 
+
     
     delete enemy;
 }       
