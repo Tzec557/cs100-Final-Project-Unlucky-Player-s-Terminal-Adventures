@@ -15,7 +15,7 @@ void Game::StartGame(){
 
     if(cin >> userInput){
 
-        while (userInput != "1" || userInput != "2") {
+        while (userInput != "1" && userInput != "2") {
             cout << "Invalid Input. Enter option again\n";
             cin >> userInput;
         }
@@ -39,7 +39,7 @@ void Game::Intro(){
     string userInput;
     if(cin >> userInput){
 
-        while (userInput != "1" || userInput != "2") {
+        while (userInput != "1" && userInput != "2") {
 
             cout << "Invalid Input. Enter option again\n";
             cin >> userInput;
