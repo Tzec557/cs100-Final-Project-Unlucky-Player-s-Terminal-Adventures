@@ -105,8 +105,6 @@ void Game::battle(){
         <<" you can flee by pressing 'q' but you will die for being a coward!\n"
         <<"if you want to fight press any other character\n\n";
 
-
-    
     cin>>choice;
     cin.clear();//flush buffer
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -128,7 +126,7 @@ void Game::battle(){
     while(enemy->getHealth()>0){//allows for player to keep fighting until he defeats the boss
         Dice *action=new Dice();//an intance of the dice object to see players action
         
-        cout<<"press x to roll the dice to see if you have to fight or defend"<<endl;
+        cout<<"press x to roll the dice to see if you have to fight or defend, or press q to exit"<<endl;
         char button;
         cin>>button;
 
@@ -136,11 +134,19 @@ void Game::battle(){
 
 
         int playerRoll=action->rollDice();//player roll
-        if (button=='x'){
+        while(button != 'x' && button != 'q'){
+            cout<<"wrong input, retype your input again "<<endl;
+            cin >> button;
+        }
+        if (button =='x'){
             cout<<"you rolled "<<playerRoll<<endl<<endl;
         }
+        else if (button =='q'){
+            cout<<"you quit the game successfully "<<endl;
+            exit(1);
+        }
         
-        cout<<enemy->getName()<< "will roll now"<<endl;//enemy roll
+        cout<<enemy->getName()<< " will roll now"<<endl;//enemy roll
         int enemyRoll=action->rollDice();
         cout<<enemy->getName()<<" rolled "<<enemyRoll<<'\n';
 
