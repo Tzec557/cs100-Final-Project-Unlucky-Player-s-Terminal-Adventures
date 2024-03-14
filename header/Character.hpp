@@ -1,16 +1,17 @@
-#pragma once 
-#include <string>
+#ifndef CHARACTER_HPP
+#define CHARACTER_HPP
+using namespace std;
+#include <string> 
 
-class Character {
-public:
-    Character();
-    Character(std::string name);
-    virtual ~Character(); // Make destructor virtual for base class
+class Character{
+    public:
+        Character();
+        Character(string name);
+        ~Character();
 
-
-        string getName()const;
+        string getName() const;
         void setName(string name);
-        int getHealth();
+        int getHealth() const;
         void addHealth(int health);
         void setHealth(int health);
 
@@ -18,5 +19,6 @@ public:
     private:
        int _health;
        string _name;
-}
+
+};
  #endif

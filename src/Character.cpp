@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "../header/Character.hpp"
 
 Character::Character() : _health(20), _name("") {}
@@ -21,4 +22,8 @@ int Character::getHealth() const {
 
 void Character::addHealth(int health) {
     _health += health;
+}
+
+void Character::setHealth(int num){
+    _health = num;
 }
