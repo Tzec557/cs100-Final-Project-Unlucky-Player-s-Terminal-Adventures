@@ -276,7 +276,7 @@ void Game::battle(){
     
     player_points->addPoint(20);//reward is 20 pts
     player_weapon->change_weapon(player_points);
-    cout<<"Congrats your new current weapon is now"<<player_weapon->getWeapon()<<endl; 
+    cout<<"Congrats your new current weapon is now "<<player_weapon->getWeapon()<<endl; 
 
     
     delete enemy;
