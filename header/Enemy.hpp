@@ -14,7 +14,7 @@ class Enemy: public Character{
  public:
     Enemy();
     Enemy(string name);
-    virtual ~Enemy();
+    //virtual ~Enemy();
 
     void damageTaken(int num);
 	void setDamage(int damage); 
