@@ -297,6 +297,6 @@ void Game::battle(){
     cout<<"Congrats your new current weapon is now"<<player_weapon->getWeapon()<<endl; 
 
     
-    //delete enemy;
+    delete enemy;
 }       
 //\n
