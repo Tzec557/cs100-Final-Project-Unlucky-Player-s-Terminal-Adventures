@@ -182,7 +182,7 @@ void Game::battle(){
         <<"\ts) Start battle\n\n";
 
     if (cin >> choice){
-        while (choice!='s' && choice!='y' && choice!='q'){
+        while (choice!='s' && choice!='q'){
 
             cout << "Invalid Input. Enter option again: ";
             cin >> choice;
