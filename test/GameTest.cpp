@@ -246,13 +246,17 @@ TEST(GameTest, PlayGameTest) {
     std::cout.rdbuf(originalCout);
 }
 
-/*
+
 
 TEST(GameTest, BedCheckpointStatsTest) {
     // Prepare input stream to simulate name selection and choosing to print stats
     std::stringstream mockInput;
     mockInput << "John\n1\n"; // Inputs for NameSelection: name entry and confirmation
     mockInput << "s\n"; // Simulates user choosing to print stats in bed_checkpoint
+
+
+    std::streambuf* originalCin = std::cin.rdbuf();
+    std::streambuf* originalCout = std::cout.rdbuf();
 
     std::stringstream mockOutput;
     std::cin.rdbuf(mockInput.rdbuf());
@@ -270,6 +274,11 @@ TEST(GameTest, BedCheckpointStatsTest) {
     EXPECT_TRUE(output.find("weapons damage: -5") != std::string::npos);
     EXPECT_TRUE(output.find("current health: 20") != std::string::npos);
     EXPECT_TRUE(output.find("current points: 0") != std::string::npos);
+
+
+
+    std::cin.rdbuf(originalCin);
+    std::cout.rdbuf(originalCout);
 }
 
 
@@ -278,6 +287,11 @@ TEST(GameTest, BedCheckpointPlayTest) {
     std::stringstream mockInput;
     mockInput << "John\n1\n"; // Inputs for NameSelection: name entry and confirmation
     mockInput << "y\n"; // Simulates user choosing to print stats in bed_checkpoint
+
+
+    std::streambuf* originalCin = std::cin.rdbuf();
+    std::streambuf* originalCout = std::cout.rdbuf();
+
 
     std::stringstream mockOutput;
     std::cin.rdbuf(mockInput.rdbuf());
@@ -292,6 +306,10 @@ TEST(GameTest, BedCheckpointPlayTest) {
     std::string output = mockOutput.str();
     // Fix the check to ensure it correctly verifies the presence of the expected output
     EXPECT_TRUE(output.find("You've chosen to battle") != std::string::npos);
+
+
+    std::cin.rdbuf(originalCin);
+    std::cout.rdbuf(originalCout);
 }
 
 
@@ -300,6 +318,9 @@ TEST(GameTest, BedCheckpointQuitTest) {
     std::stringstream mockInput;
     mockInput << "John\n1\n"; // Inputs for NameSelection: name entry and confirmation
     mockInput << "q\n"; // Simulates user choosing to print stats in bed_checkpoint
+
+    std::streambuf* originalCin = std::cin.rdbuf();
+    std::streambuf* originalCout = std::cout.rdbuf();
 
     std::stringstream mockOutput;
     std::cin.rdbuf(mockInput.rdbuf());
@@ -317,6 +338,10 @@ TEST(GameTest, BedCheckpointQuitTest) {
     std::string output = mockOutput.str();
     // Fix the check to ensure it correctly verifies the presence of the expected output
     EXPECT_TRUE(output.find("You have chosen to quit. Goodbye.") != std::string::npos);
+
+
+    std::cin.rdbuf(originalCin);
+    std::cout.rdbuf(originalCout);
 }
 
 
@@ -326,6 +351,10 @@ TEST(GameTest, BattleQuitTest) {
     std::stringstream mockInput;
     mockInput << "John\n1\n"; // Inputs for NameSelection: name entry and confirmation
     mockInput << "q\n"; // Simulates user choosing to print stats in bed_checkpoint
+
+    std::streambuf* originalCin = std::cin.rdbuf();
+    std::streambuf* originalCout = std::cout.rdbuf();
+
 
     std::stringstream mockOutput;
     std::cin.rdbuf(mockInput.rdbuf());
@@ -343,6 +372,9 @@ TEST(GameTest, BattleQuitTest) {
     std::string output = mockOutput.str();
     // Fix the check to ensure it correctly verifies the presence of the expected output
     EXPECT_TRUE(output.find("you chose the easy way out smh") != std::string::npos);
+
+    std::cin.rdbuf(originalCin);
+    std::cout.rdbuf(originalCout);
 }
 
 TEST(GameTest, BattleStartTest) {
@@ -350,6 +382,9 @@ TEST(GameTest, BattleStartTest) {
     std::stringstream mockInput;
     mockInput << "John\n1\n"; // Inputs for NameSelection: name entry and confirmation
     mockInput << "s\n"; // Simulates user choosing to print stats in bed_checkpoint
+
+    std::streambuf* originalCin = std::cin.rdbuf();
+    std::streambuf* originalCout = std::cout.rdbuf();
 
     std::stringstream mockOutput;
     std::cin.rdbuf(mockInput.rdbuf());
@@ -367,7 +402,11 @@ TEST(GameTest, BattleStartTest) {
     std::string output = mockOutput.str();
     // Fix the check to ensure it correctly verifies the presence of the expected output
     EXPECT_TRUE(output.find("your battle begins now!") != std::string::npos);
+
+    std::cin.rdbuf(originalCin);
+    std::cout.rdbuf(originalCout);
 }
+
 
 
 
