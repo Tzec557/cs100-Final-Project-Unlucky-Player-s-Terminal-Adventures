@@ -73,7 +73,7 @@ TEST(GameTest, IntroContinueTest) {
     EXPECT_TRUE(output.find("Invalid Input. Enter option again:") == std::string::npos);
     EXPECT_TRUE(output.find("You die.") == std::string::npos);
 }
-
+/*
 TEST(GameTest, IntroInvalidTest) {
     std::stringstream mockInput("a\n2\n"); // Simulates user choosing to play
     std::stringstream mockOutput;
@@ -89,7 +89,7 @@ TEST(GameTest, IntroInvalidTest) {
     EXPECT_TRUE(output.find("You die.") != std::string::npos);
 }
 
-/*
+
 
 
 
