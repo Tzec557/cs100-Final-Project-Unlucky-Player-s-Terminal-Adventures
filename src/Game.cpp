@@ -117,6 +117,7 @@ void Game::PlayGame(){
 
     while (player_points->getPoint() < 100) {
         bed_checkpoint();
+	battle();
     }
     cout << "You have reached 100 points and won the game!!!\n"
          << "After enduring countless chemotherapy sessions, braving the trials of the Bosses, you finally stand victorious at the Cancer Treatment Center.\n"
@@ -156,7 +157,6 @@ void Game::bed_checkpoint(){
         } else {
 
             cout<<"You've chosen to battle"<<endl;
-            battle();
         }
     }
 
@@ -267,8 +267,6 @@ void Game::battle(){
 
         if (playerOne->getHealth()<=0){
             cout<<"OH YOU DEAD LOL\n";
-            bed_checkpoint();
-            //later add a way to go back to bed checkpoint
         }
         
 	delete action;
