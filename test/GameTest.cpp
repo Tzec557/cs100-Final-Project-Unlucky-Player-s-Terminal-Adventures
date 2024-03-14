@@ -33,12 +33,12 @@ TEST(GameTest, IntroDeathTest) {
 
     MockGame game;
 
-    // Expectations
     EXPECT_CALL(game, Intro()).Times(1); // Expect Intro to be called
 
     game.Intro();
 
     std::string output = mockOutput.str();
+
     EXPECT_TRUE(output.find("Invalid Input. Enter option again:") != std::string::npos);
     EXPECT_TRUE(output.find("You die.") == std::string::npos);
 }
@@ -50,7 +50,9 @@ TEST(GameTest, IntroContinueTest) {
     std::cout.rdbuf(mockOutput.rdbuf());
 
     MockGame game;
+
     EXPECT_CALL(game, Intro()).Times(1);
+
     game.Intro();
 
     std::string output = mockOutput.str();
@@ -65,7 +67,9 @@ TEST(GameTest, IntroInvalidTest) {
     std::cout.rdbuf(mockOutput.rdbuf());
 
     MockGame game;
+
     EXPECT_CALL(game, Intro()).Times(1);
+
     game.Intro();
 
     std::string output = mockOutput.str();
@@ -83,11 +87,11 @@ TEST(GameTest, PrintUserStatsTest) {
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
+    MockGame game;
 
     EXPECT_CALL(game, NameSelection()).Times(1); 
     EXPECT_CALL(game, printUserStats()).Times(1);
 
-    MockGame game;
     game.NameSelection(); 
     game.printUserStats();
 
