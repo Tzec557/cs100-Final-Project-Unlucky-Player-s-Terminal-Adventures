@@ -62,6 +62,10 @@ TEST(GameTest, IntroDeathTest) {
 TEST(GameTest, IntroContinueTest) {
     std::stringstream mockInput("1\n"); // Simulates user choosing to play
     std::stringstream mockOutput;
+
+    std::streambuf* originalCin = std::cin.rdbuf();
+    std::streambuf* originalCout = std::cout.rdbuf();
+    
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
@@ -72,11 +76,21 @@ TEST(GameTest, IntroContinueTest) {
     std::string output = mockOutput.str();
     EXPECT_TRUE(output.find("Invalid Input. Enter option again:") == std::string::npos);
     EXPECT_TRUE(output.find("You die.") == std::string::npos);
+
+    std::cin.rdbuf(originalCin);
+    std::cout.rdbuf(originalCout);
 }
-/*
+
+
+
+
 TEST(GameTest, IntroInvalidTest) {
     std::stringstream mockInput("a\n2\n"); // Simulates user choosing to play
     std::stringstream mockOutput;
+    
+    std::streambuf* originalCin = std::cin.rdbuf();
+    std::streambuf* originalCout = std::cout.rdbuf();
+    
     std::cin.rdbuf(mockInput.rdbuf());
     std::cout.rdbuf(mockOutput.rdbuf());
 
@@ -87,10 +101,13 @@ TEST(GameTest, IntroInvalidTest) {
     std::string output = mockOutput.str();
     EXPECT_TRUE(output.find("Invalid Input. Enter option again:") != std::string::npos);
     EXPECT_TRUE(output.find("You die.") != std::string::npos);
+
+    std::cin.rdbuf(originalCin);
+    std::cout.rdbuf(originalCout);
 }
 
 
-
+/*
 
 
 TEST(GameTest, PrintUserStatsTest) {
@@ -309,7 +326,8 @@ TEST(GameTest, BattleStartTest) {
     // Fix the check to ensure it correctly verifies the presence of the expected output
     EXPECT_TRUE(output.find("your battle begins now!") != std::string::npos);
 }
-*/
+
+
 
 /*
 int main(int argc, char** argv) {
