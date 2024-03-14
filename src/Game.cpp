@@ -41,8 +41,8 @@ void Game::StartGame(){
 
 void Game::Intro(){
     cout << "Welcome to Unlucky Player's Terminal Adventures. You have been transported to a hospital. In this game, you have a terminal cancer! Hooray! Your goal for this game is to beat as many boss as possible and earn 100 points to defeat the cancer!\n"        
-         << "\t1) if you would like to enter the game to heal the cancer\n" 
-         << "\t2) quit\n\n\n";
+         << "\t1) Enter the game to heal the cancer\n" 
+         << "\t2) Quit\n\n\n";
 
     string userInput;
     if(cin >> userInput){
@@ -71,8 +71,8 @@ void Game::NameSelection(){
     //confirm
     cout << "\n\nAre you sure you would like to continue with the name " << userName << "?\n";
     cout << "Options: \n"
-         << "\t1) confirm\n"
-         << "\t2) quit\n\n\n";
+         << "\t1) Confirm\n"
+         << "\t2) Quit\n\n\n";
 
     string userInput;
 
@@ -125,9 +125,9 @@ void Game::bed_checkpoint(){
 
     cout<<"You have spawned into your bed\n\n";
     cout<<"Options:\n"
-        <<"\ts) print your stats\n"
-        <<"\ty) start battle\n"
-        <<"\tq) quit\n\n";
+        <<"\ts) Print your stats\n"
+        <<"\ty) Start battle\n"
+        <<"\tq) Quit\n\n";
     
     char buttonOption;
 
@@ -159,11 +159,13 @@ void Game::printUserStats(){
 
     cout<<"Your current stats: "<<endl;
     
-    cout<<"\tWeapon and weapons damage: "<<endl
+    cout<<"\tWeapon and weapons damage: "<<endl<<endl 
         <<"\tcurrent weapon: "<<player_weapon->getWeapon()<<endl
-        <<"\tweapons damage: "<<player_weapon->getWeaponDamage()<<endl;
-    cout<<"\tcurrent health: "<<playerOne->getHealth()<<endl;
-    cout<<"\tcurrent points: "<<player_points->getPoint()<<endl<<endl<<endl;
+        <<"\tweapons damage: "<<player_weapon->getWeaponDamage()<<endl<<endl;
+    
+    cout<<"\tcurrent health:"<<playerOne->getHealth()<<endl<<endl;
+
+    cout<<"\tcurrent points: "<<player_points->getPoint()<<endl;
 
     return;
 }
@@ -176,8 +178,8 @@ void Game::battle(){
     enemy=new Enemy("housefly");    
     
     cout<<"you are now fighting "<<enemy->getName() << "\n"
-        <<"\tq) flee by pressing but you will die for being a coward!\n"
-        <<"\ts) start battle\n\n";
+        <<"\tq) Flee by pressing but you will die for being a coward!\n"
+        <<"\ts) Start battle\n\n";
 
     if (cin >> choice){
         while (choice!='s' && choice!='y' && choice!='q'){
