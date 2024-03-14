@@ -40,6 +40,8 @@ TEST(GameTest, IntroDeathTest) {
 
     std::string output = mockOutput.str();
 
+    cout << output << endl;
+
     EXPECT_TRUE(output.find("Invalid Input. Enter option again:") != std::string::npos);
     EXPECT_TRUE(output.find("You die.") == std::string::npos);
 }
