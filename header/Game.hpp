@@ -23,6 +23,7 @@ class Game{
         virtual void Intro();
         virtual void NameSelection();
         virtual void PlayGame();
+	virtual void setPlayerPoints(int);
 	virtual void printUserStats();
         virtual void battle();
         virtual void bed_checkpoint();

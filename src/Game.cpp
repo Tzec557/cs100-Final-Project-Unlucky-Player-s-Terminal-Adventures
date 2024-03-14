@@ -123,6 +123,10 @@ void Game::PlayGame(){
          << "Though the road was tough and the challenges many, you emerged stronger, wiser, and filled with hope for the future. The sun shines brighter, the colors seem more vivid, and you know that you are unstoppable.\n";
 }
 
+void Game::setPlayerPoints(int points) {
+    player_points->addPoint(points);
+}
+
 
 void Game::bed_checkpoint(){
 

@@ -145,7 +145,6 @@ TEST(GameTest, NameSelectionInvalidInputTest) {
 
 
 
-
 TEST(GameTest, PlayGameTest) {
     // Prepare input stream to simulate both name selection and the initial action in PlayGame
     std::stringstream mockInput;
@@ -160,13 +159,16 @@ TEST(GameTest, PlayGameTest) {
 
     // Call NameSelection first to simulate setting up the player's name
     game.NameSelection();
+    
+
+    game.setPlayerPoints(100);
 
     // Execute the PlayGame method which now operates with a selected name
     game.PlayGame();
 
     // Validate the outcome
     std::string output = mockOutput.str();
-    EXPECT_TRUE(output.find("You've chosen to battle") != std::string::npos); // Verify the specific output
+    EXPECT_TRUE(output.find("You have reached 100 points and won the game!!!") != std::string::npos); // Verify the specific output
 }
 
 
@@ -218,7 +220,6 @@ TEST(GameTest, BedCheckpointPlayTest) {
     // Fix the check to ensure it correctly verifies the presence of the expected output
     EXPECT_TRUE(output.find("You've chosen to battle") != std::string::npos);
 }
-
 
 
 TEST(GameTest, BedCheckpointQuitTest) {
