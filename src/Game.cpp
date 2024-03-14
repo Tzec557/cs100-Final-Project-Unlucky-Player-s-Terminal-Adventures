@@ -117,7 +117,6 @@ void Game::PlayGame(){
 
     while (player_points->getPoint() < 100) {
         bed_checkpoint();
-        battle();
     }
     cout << "You have reached 100 points and won the game!!!\n"
          << "After enduring countless chemotherapy sessions, braving the trials of the Bosses, you finally stand victorious at the Cancer Treatment Center.\n"
@@ -184,12 +183,13 @@ void Game::battle(){
     Enemy *enemy = new Enemy();
     enemy->setName(enemy->getRandomEnemyName(enemyNames));
     enemy->setHealth(enemy->randomInRange(20, 50));
+    playerOne->setHealth(20);
     // enemy = new Enemy(enemy.getRandomEnemyName(enemyNames));
     // // enemy.setName(enemy.getRandomEnemyName(enemyNames));
     // enemy.setHealth(enemy.randomInRange(20, 50));  
 
     //enemy=new Enemy("housefly");    
-    
+    cout<<"Your health is set at 20\n";
     cout<<"you are now fighting "<<enemy->getName() << "\n"
         <<"\tq) Flee by pressing but you will die for being a coward!\n"
         <<"\ts) Start battle\n\n";
@@ -277,7 +277,7 @@ void Game::battle(){
     
     player_points->addPoint(20);//reward is 20 pts
     player_weapon->change_weapon(player_points);
-    cout<<"Congrats your new current weapon is now "<<player_weapon->getWeapon()<<endl; 
+    cout<<"Congrats your new current weapon is now"<<player_weapon->getWeapon()<<endl; 
 
     
     delete enemy;
