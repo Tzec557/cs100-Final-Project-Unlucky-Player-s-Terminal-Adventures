@@ -285,7 +285,7 @@ TEST(GameTest, BattleQuitTest) {
     MockGame game;
 
     EXPECT_CALL(game, NameSelection()).Times(1); // NameSelection is already executed, no more expectations
-    EXPECT_CALL(game, battle()).Times(testing::AtLeast(1)); // Expect bed_checkpoint to be called at least once
+    EXPECT_CALL(game, battle()).Times(1); // Expect bed_checkpoint to be called at least once
 
     // Call NameSelection first to simulate setting up the player's name
     game.NameSelection();
@@ -312,7 +312,7 @@ TEST(GameTest, BattleStartTest) {
     MockGame game;
 
     EXPECT_CALL(game, NameSelection()).Times(1); // NameSelection is already executed, no more expectations
-    EXPECT_CALL(game, battle()).Times(testing::AtLeast(1)); // Expect bed_checkpoint to be called at least once
+    EXPECT_CALL(game, battle()).Times(1); // Expect bed_checkpoint to be called at least once
 
     // Call NameSelection first to simulate setting up the player's name
     game.NameSelection();
