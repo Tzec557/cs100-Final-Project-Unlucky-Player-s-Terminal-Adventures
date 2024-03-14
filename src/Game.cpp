@@ -25,7 +25,8 @@ void Game::StartGame(){
         }
 
         if(userInput == "2"){
-
+	    cout << "You have chosen to exit this game."<<endl;
+	    isGameRunning = false;
             return;  
         } else {
 
@@ -57,7 +58,8 @@ void Game::Intro(){
 
         if (userInput == "2") {
             cout << "You die.\n";
-            return;
+	    isGameRunning = false;
+	    return;
         }
     } 
 }
@@ -88,7 +90,8 @@ void Game::NameSelection(){
 
         if (userInput == "2") {
             cout << "You have chosen to quit. Goodbye.\n\n";
-            return;
+	    isGameRunning = false;
+	    return;
         } else {
             cout << "You have chosen to confirm. Welcome " << userName << ".\n\n";
         }
@@ -98,6 +101,7 @@ void Game::NameSelection(){
 }
 
 void Game::PlayGame(){
+
     // intro and stats
     cout << "\n\nYou spawn in the world. You wake up.\n\n"
          << "Stats: \n"
@@ -114,14 +118,17 @@ void Game::PlayGame(){
     //rules to battling
     cout<<"In battle you will choose a number 1-6 and the Enemy will roll a dice\n"
         <<"if the number you choose is less than the one the enemy rolled he gets to attacks and vice versa\n\n\n";
-
-    while (player_points->getPoint() < 100) {
-        bed_checkpoint();
-	battle();
+    while (isGameRunning) {
+   	 while (player_points->getPoint() < 100) {
+        	bed_checkpoint();
+		battle();
+		if (!isGameRunning) break;
+    	}
     }
     cout << "You have reached 100 points and won the game!!!\n"
          << "After enduring countless chemotherapy sessions, braving the trials of the Bosses, you finally stand victorious at the Cancer Treatment Center.\n"
          << "Though the road was tough and the challenges many, you emerged stronger, wiser, and filled with hope for the future. The sun shines brighter, the colors seem more vivid, and you know that you are unstoppable.\n";
+
 }
 
 void Game::setPlayerPoints(int points) {
@@ -153,7 +160,8 @@ void Game::bed_checkpoint(){
         } else if (buttonOption == 'q'){
 
             cout << "You have chosen to quit. Goodbye.\n";
-            return;
+	    isGameRunning = false;
+	    return;
         } else {
 
             cout<<"You've chosen to battle"<<endl;
@@ -209,7 +217,8 @@ void Game::battle(){
         if (choice == 'q'){
 
             cout<<"you chose the easy way out smh\n";
-            return;
+            isGameRunning = false;
+	    return;
         } else {
 
             cout<<"your battle begins now!\n\n";

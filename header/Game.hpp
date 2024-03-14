@@ -33,4 +33,5 @@ class Game{
         Enemy *enemy=nullptr;
         Point *player_points=new Point();
         Weapon *player_weapon=new Weapon();
+	bool isGameRunning = true;
 };
