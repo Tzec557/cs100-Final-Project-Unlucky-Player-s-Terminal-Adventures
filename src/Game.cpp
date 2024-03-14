@@ -198,7 +198,7 @@ void Game::battle(){
     char choice;//ask if player wants to flee or fight 
     vector<string> enemyNames = {"Viper", "Shadow", "Doom", "Nightmare", "Darklord"};
 	
-    Enemy *enemy = new Enemy();
+    enemy = new Enemy();
     enemy->setName(enemy->getRandomEnemyName(enemyNames));
     enemy->setHealth(enemy->randomInRange(20, 50));
     playerOne->setHealth(20);
