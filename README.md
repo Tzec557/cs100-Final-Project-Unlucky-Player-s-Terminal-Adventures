@@ -112,6 +112,7 @@ This diagram represents a dynamic and interactive narrative where player decisio
  > Screenshots of the input/output after running your application
  ## Installation/Usage
  > Instructions on installing and running your application:
+ > * To install our game, go to code and download the zip file, preferably open with vscode.
  > * In our game the way you run it is by running a command in the terminal and this command is ./bin/runMain which will then start the game.
  > * You will then be given an option to either start the game by pressing 1 or quit with 2.
  > * If you start the game you be met with intro dialogue welcoming you into the game and then asking the user if they want to enter the game to heal by fighting bosses by pressing 1 or quitting with 2.
