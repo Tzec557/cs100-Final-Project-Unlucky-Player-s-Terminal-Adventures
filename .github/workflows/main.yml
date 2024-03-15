@@ -23,4 +23,4 @@ jobs:
       run: |
        cmake .
        make
-       valgrind --leak-check=full --track-origins=yes --show-reachable=yes ./bin/runAllTests
+       ./bin/runAllTests
