@@ -4,6 +4,8 @@
 TEST(CharacterTests, testinitializer){
     Character *c = new Character();
     ASSERT_NE(c,nullptr);
+    delete c;
+    
 }
 
 TEST(CharacterTests, GetNameTest) {
@@ -20,18 +22,21 @@ TEST(CharacterTests, SetNameTest) {
 TEST(CharacterTests, GetHealthTest) {
     Character *c = new Character("HealthTest");
     EXPECT_EQ(c->getHealth(), 20); // Assuming initial health is 20
+    delete c;
 }
 
 TEST(CharacterTests, AddHealthTest) {
     Character *c = new Character("HealthAddTest");
     c->addHealth(70);
     EXPECT_EQ(c->getHealth(), 90);
+    delete c;
 }
 
 TEST(CharacterTests, AddNegativeHealthTest) {
     Character *c = new Character("HealthAddNegativeTest");
     c->addHealth(-20); // Assuming adding negative health is allowed
     EXPECT_EQ(c->getHealth(), 0);
+    delete c;
 }
 
 TEST(CharacterTests, SetHealthTest) {

@@ -4,9 +4,12 @@
 TEST(PointTests, testinitializer){
     Point *p = new Point();
     ASSERT_NE(p,nullptr);
+    delete p;
 }
+
 TEST(PointTests, testGetPoint){
     Point *p = new Point();
     p->addPoint(30);
     ASSERT_EQ(p->getPoint(),30);
+    delete p;
 }
