@@ -62,7 +62,7 @@ This diagram represents a dynamic and interactive narrative where player decisio
 
 
 ### Screen Layouts
-![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/Screen%20Layout.jpeg)
+![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.31.47.png)
 
 #### Start Screen
 - **Options:** New Game, Exit
