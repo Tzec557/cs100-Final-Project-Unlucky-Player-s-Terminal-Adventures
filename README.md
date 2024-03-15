@@ -109,14 +109,12 @@ This diagram represents a dynamic and interactive narrative where player decisio
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- ![alt text]([https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.31.47.png](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.34.54.png))
+ ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.34.54.png)
  ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.35.46.png)
- ![alt text]([https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.35.46.png](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.35.59.png
-))
- ![alt text]([https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.35.46.png](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.36.13.png))
- ![alt text]([https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.35.46.png](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.36.25.png
-))
- ![alt text]([https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.35.46.png](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.36.35.png))
+ ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.35.59.png)
+ ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.36.13.png)
+ ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.36.25.png)
+ ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.36.35.png)
 
  ## Installation/Usage
   Instructions on installing and running your application:
