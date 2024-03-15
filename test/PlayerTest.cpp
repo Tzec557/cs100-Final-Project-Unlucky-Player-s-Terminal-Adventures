@@ -4,6 +4,7 @@
 TEST(PlayerTests, testinitializer){
     Player *p = new Player();
     ASSERT_NE(p,nullptr);
+    delete p;
 }
 
 TEST(PlayerTests, DamageDoneTest) {
