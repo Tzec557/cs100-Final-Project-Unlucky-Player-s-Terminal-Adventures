@@ -72,7 +72,7 @@ This diagram represents a dynamic and interactive narrative where player decisio
 - **Components:**
   - Choose Name
   - Confirm Choices
-- **Purpose:** Enables the player to create their character with a chosen name.
+- **Purpose:** Enables the player to create their character with a chosen name, and class.
 
 #### Main Game Screen
 - **Components:** Player Stats (Name, Health, Attack, Defense)
