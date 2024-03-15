@@ -109,15 +109,14 @@ void Game::PlayGame(){
     // intro and stats
     cout << "\n\nYou spawn in the world. You wake up.\n\n"
          << "Stats: \n"
-         << "\tClass: Warrior\n"
          << "\tHealth: 20/20\n"
-         << "\tAttack: 2\n"
-         << "\tDefense: 1\n\n\n";
+         << "\tAttack: 5\n"
+         << "\tDefense: none!\n\n\n";
     // intro to boss
     cout << "You look out your bedroom window and realize you have been transported to a different world.\n"
          << "You get out of bed...\n"
          << "As you are about to walk out of your room, you encounter your first enemy...\n"
-         << "Your first enemy is a housefly. Defeat it to gain points to cure your illness\n\n\n";
+         << "Your first enemy is now trying to kill you oh no try and defeat it else you die. If you defeat it you gain points that will help you cure your illness\n\n\n";
     
     //rules to battling
     cout<<"In battle you will choose a number 1-6 and the Enemy will roll a dice\n"
@@ -295,8 +294,11 @@ void Game::battle(){
     player_points->addPoint(20);//reward is 20 pts
     player_weapon->change_weapon(player_points);
     cout<<"Congrats your new current weapon is now"<<player_weapon->getWeapon()<<endl; 
-
+    
     
     delete enemy;
+    
+    
+    //delete enemy;
 }       
 //\n
