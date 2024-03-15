@@ -295,9 +295,9 @@ void Game::battle(){
     player_weapon->change_weapon(player_points);
     cout<<"Congrats your new current weapon is now"<<player_weapon->getWeapon()<<endl; 
     
-    if (player_points->getPoint()!=100){
-        delete enemy;
-    }
+    
+    delete enemy;
+    
     
     //delete enemy;
 }       

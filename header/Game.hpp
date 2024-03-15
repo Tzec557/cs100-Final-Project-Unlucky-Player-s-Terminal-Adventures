@@ -18,11 +18,11 @@ class Game{
                 delete playerOne;
                 playerOne=nullptr;
             }
-            if (enemy !=nullptr){ 
+            /*if (enemy !=nullptr){ 
                 delete enemy; 
                 enemy=nullptr;
             }
-            
+            */
             if (player_points !=nullptr){   
                 delete player_points;
                 player_points=nullptr;
