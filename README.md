@@ -101,7 +101,7 @@ This diagram represents a dynamic and interactive narrative where player decisio
 
 * [Class Diagram](https://www.canva.com/design/DAF8Q2YofAE/3AaZgaXJxIf-3V4Yf_nnZA/edit?utm_content=DAF8Q2YofAE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
  
- > ## Final deliverable
+  ## Final deliverable
  
  ## Screenshots
  ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.34.54.png)
