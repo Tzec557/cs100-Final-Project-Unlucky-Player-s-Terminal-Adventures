@@ -111,14 +111,14 @@ This diagram represents a dynamic and interactive narrative where player decisio
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application:
- > * To install our game, go to code and download the zip file, preferably open with vscode.
- > * In our game the way you run it is by running a command in the terminal and this command is ./bin/runMain which will then start the game.
- > * You will then be given an option to either start the game by pressing 1 or quit with 2.
- > * If you start the game you be met with intro dialogue welcoming you into the game and then asking the user if they want to enter the game to heal by fighting bosses by pressing 1 or quitting with 2.
- > * If the user presses 1 then they will be met with a prompt asking for their name which the user would type in and then the user will be asked if he wants confrim his name or quit using 1 and 2.
- > * If user confirms his name choice they will then be met with a story for the game and explained how the battling will work.
- > * User will then spawn in checkpoint where he could check his stats by pressing s, then going into battle by pressing y or quitting by pressing q. After starting battle, you can confirm by pressing s or quitting by pressing q.
- > * In battle user will press x to roll a dice where if he gets a higher number he can attack or else the enemy can attack and both the user and enemy have a chance at dodging the attack. The User will then keep fighting where he will spawn back to bed checkpoint if he dies or wins and keep fighting till he has 100 points. As he reaches certain points, his weapon will also increase, increasing the damage he does to the boss.
+  Instructions on installing and running your application:
+  * To install our game, go to code on github and download the zip file, preferably open with vscode.
+  * In our game the way you run it is by running a command in the terminal and this command is ./bin/runMain which will then start the game.
+  * You will then be given an option to either start the game by pressing 1 or quit with 2.
+  * If you start the game you be met with intro dialogue welcoming you into the game and then asking the user if they want to enter the game to heal by fighting bosses by pressing 1 or quitting with 2.
+  * If the user presses 1 then they will be met with a prompt asking for their name which the user would type in and then the user will be asked if he wants confrim his name or quit using 1 and 2.
+  * If user confirms his name choice they will then be met with a story for the game and explained how the battling will work.
+  * User will then spawn in checkpoint where he could check his stats by pressing s, then going into battle by pressing y or quitting by pressing q. After starting battle, you can confirm by pressing s or quitting by pressing q.
+  * In battle user will press x to roll a dice where if he gets a higher number he can attack or else the enemy can attack and both the user and enemy have a chance at dodging the attack. The User will then keep fighting where he will spawn back to bed checkpoint if he dies or wins and keep fighting till he has 100 points. As he reaches certain points, his weapon will also increase, increasing the damage he does to the boss.
  ## Testing
 All the classes have their unit tests saved in the testing cpp file of the according functions for possible scenarios. The pros of having separate test files for each class are the ability to test individual classes. All the tests will be compiled using CMake, which allowed us to set up Continuous Integration (CI) within this GitHub repo. This compiles all the tests using Cmake and checks if all the tests for all the classes will pass when pushed or pulled.
