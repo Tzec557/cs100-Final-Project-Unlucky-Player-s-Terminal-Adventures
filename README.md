@@ -102,11 +102,6 @@ This diagram represents a dynamic and interactive narrative where player decisio
 * [Class Diagram](https://www.canva.com/design/DAF8Q2YofAE/3AaZgaXJxIf-3V4Yf_nnZA/edit?utm_content=DAF8Q2YofAE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
  
  > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
  ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.34.54.png)
@@ -126,6 +121,6 @@ This diagram represents a dynamic and interactive narrative where player decisio
   * If user confirms his name choice they will then be met with a story for the game and explained how the battling will work.
   * User will then spawn in checkpoint where he could check his stats by pressing s, then going into battle by pressing y or quitting by pressing q. After starting battle, you can confirm by pressing s or quitting by pressing q.
   * In battle user will press x to roll a dice where if he gets a higher number he can attack or else the enemy can attack and both the user and enemy have a chance at dodging the attack. The User will then keep fighting where he will spawn back to bed checkpoint if he dies or wins and keep fighting till he has 100 points. As he reaches certain points, his weapon will also increase, increasing the damage he does to the boss.
- ## Testing  ![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+ ## Testing  ![example workflow](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/.github/workflows/main.yml/badge.svg)
 All the classes have their unit tests saved in the testing cpp file of the according functions for possible scenarios. The pros of having separate test files for each class are the ability to test individual classes. All the tests will be compiled using CMake, which allowed us to set up Continuous Integration (CI) within this GitHub repo. This compiles all the tests using Cmake and checks if all the tests for all the classes will pass when pushed or pulled.
 ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/Screenshot%202024-03-14%20at%2019.49.59.png)
