@@ -92,7 +92,7 @@ This diagram represents a dynamic and interactive narrative where player decisio
 
 
 ## Class Diagram
-![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-13%20%E4%B8%8B%E5%8D%8811.34.28.png)
+![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/ezhao012/valgrindcheck/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.19.42.png)
 
 >In our updated class diagram we applied the single responsibility principle. We applied it by changing our player class so that it splits into 3 classes of player, enemy, and character which both player and enemy derive from. This helped our code as it made it look less cluttered. 
 
