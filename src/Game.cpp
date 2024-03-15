@@ -134,6 +134,9 @@ void Game::PlayGame(){
              << "After enduring countless chemotherapy sessions, braving the trials of the Bosses, you finally stand victorious at the Cancer Treatment Center.\n"
              << "Though the road was tough and the challenges many, you emerged stronger, wiser, and filled with hope for the future. The sun shines brighter, the colors seem more vivid, and you know that you are unstoppable.\n";
     }
+
+
+    enemy = new Enemy();
 }
 
 void Game::setPlayerPoints(int points) {
