@@ -112,8 +112,8 @@ This diagram represents a dynamic and interactive narrative where player decisio
  > Screenshots of the input/output after running your application
  ## Installation/Usage
  > Instructions on installing and running your application:
->  In our game the way you run it is by running a command in the terminal.
->  You will then be met with intro dialogue that will tell you about the story and how everything works. You type in the name for your player and then you go into the your bed will you can check your stats and go into battle or end.
+>  In our game the way you run it is by running a command in the terminal and this command is ./bin/runMain which will then start the game.
+>  You will then be given an option to either start the game by pressing 1 or quit with 2. If you start the game you be met with intro dialogue welcoming you into the game and then asking the user if they want to enter the game to heal by pressing 1 or quit with 2. If user then presses one they will be met with a prompt asking for their name which the user would type in and then the user will be asked if he wants confrim his name or quit. If user confirms his name choice they will then be met with a story for the game and explained how the battling will work. User will then spawn in checkpoint where he could check his stats then go into battle or go straight into battle. In battle user will press x to roll a dice where if he gets a higher number he can attack or else the enemy can attack and both the user and enemy have a chance at dodgeing the attack. User will then keep fighting where he will spawn back to bed checkpoint if he dies or wins and keep fighting till he has 100 points.
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
