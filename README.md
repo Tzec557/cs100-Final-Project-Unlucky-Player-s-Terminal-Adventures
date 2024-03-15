@@ -76,13 +76,13 @@ This diagram represents a dynamic and interactive narrative where player decisio
 - **Purpose:** Displays essential player information and provides access to different game features.
 
 #### Player Stats
-- **Components:** Health, Attack, Defense
+- **Components:** Health, Attack
 - **Purpose:** Shows the player's current stats.
 
 #### Boss Battle Screen
 - **Components:**
   - Boss HP
-  - Player Options (Attack, Defend, Flee)
+  - Player Options (Attack, Flee)
 - **Purpose:** Represents the interface during a boss battle, where the player can choose actions.
 
 
@@ -91,9 +91,9 @@ This diagram represents a dynamic and interactive narrative where player decisio
 ## Class Diagram
 ![alt text](https://github.com/cs100/final-project-ezhao012-hshim023-ntewi001-kcarr079/blob/master/Diagrams/%E6%88%AA%E5%B1%8F2024-03-14%20%E4%B8%8B%E5%8D%887.22.27.png)
 
->In our updated class diagram we applied the single responsibility principle. We applied it by changing our player class so that it splits into 3 classes of player, enemy, and character which both player and enemy derive from. This helped our code as it made it look less cluttered. 
+* In our updated class diagram we applied the single responsibility principle. We applied it by changing our player class so that it splits into 3 classes of player, enemy, and character which both player and enemy derive from. This helped our code as it made it look less cluttered. 
 
->In our second update to our class diagram, we applied the single responsibility principle again. In our original player class, it contained functions that should have been done in a separate class.  So we created a point class and weapon class that deals with those aspects of our game. This change made so our player class doesn't contain functions that it should not be responsible for.
+* In our second update to our class diagram, we applied the single responsibility principle again. In our original player class, it contained functions that should have been done in a separate class.  So we created a point class and weapon class that deals with those aspects of our game. This change made so our player class doesn't contain functions that it should not be responsible for.
 
 
 * [Class Diagram](https://www.canva.com/design/DAF8Q2YofAE/3AaZgaXJxIf-3V4Yf_nnZA/edit?utm_content=DAF8Q2YofAE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
