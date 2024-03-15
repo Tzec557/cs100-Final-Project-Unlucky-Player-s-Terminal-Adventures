@@ -128,6 +128,5 @@ This diagram represents a dynamic and interactive narrative where player decisio
   * If user confirms his name choice they will then be met with a story for the game and explained how the battling will work.
   * User will then spawn in checkpoint where he could check his stats by pressing s, then going into battle by pressing y or quitting by pressing q. After starting battle, you can confirm by pressing s or quitting by pressing q.
   * In battle user will press x to roll a dice where if he gets a higher number he can attack or else the enemy can attack and both the user and enemy have a chance at dodging the attack. The User will then keep fighting where he will spawn back to bed checkpoint if he dies or wins and keep fighting till he has 100 points. As he reaches certain points, his weapon will also increase, increasing the damage he does to the boss.
- ## Testing
+ ## Testing ![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
 All the classes have their unit tests saved in the testing cpp file of the according functions for possible scenarios. The pros of having separate test files for each class are the ability to test individual classes. All the tests will be compiled using CMake, which allowed us to set up Continuous Integration (CI) within this GitHub repo. This compiles all the tests using Cmake and checks if all the tests for all the classes will pass when pushed or pulled.
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
