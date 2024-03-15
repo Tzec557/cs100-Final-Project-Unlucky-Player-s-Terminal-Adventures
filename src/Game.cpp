@@ -222,7 +222,8 @@ void Game::battle(){
         if (choice == 'q'){
 
             cout<<"you chose the easy way out smh\n";
-            isGameRunning = false;
+            delete enemy;
+	    isGameRunning = false;
 	    return;
         } else {
 
